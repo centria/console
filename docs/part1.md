@@ -304,7 +304,7 @@ The button **Create repository** adds the project to your personal account. When
 
 A remote can be linked to a local project with the command **git remote add**.
 
-The command takes the name and the address of the remote repository as arguments. GitHub offers two options for the repository address protocol: SSH and HTTPS. The first option should be familiar to you from the first part of the course, where the command **ssh** was used. This type of connection is possible to use also with GitHub, if the local system has an SSH key pair, and the public key has been added to GitHub. If the user uses the HTTPS connection type, they will be authenticated with their GitHub username and password. Using an SSH connection is therefore a little less tedious, since the private key can be added to the ssh-agent. You can read more about SSH keys from the first part.
+The command takes the name and the address of the remote repository as arguments. GitHub offers two options for the repository address protocol: SSH and HTTPS. SSH of connection is possible to use also with GitHub, if the local system has an SSH key pair, and the public key has been added to GitHub. If the user uses the HTTPS connection type, they will be authenticated with their GitHub username and password. Using an SSH connection is therefore a little less tedious, since the private key can be added to the ssh-agent.
 
 We'll choose the SSH address for the remote project:
 

@@ -9,6 +9,8 @@ published: true
 
 This is the beginning of the course material. The primary goal of the first part is to get to know the command line in a Unix-like environment.
 
+If you do not have access to Unix, Linux or Mac, you can do the exercises in Windows 10 with **Linux Subsystem**, **Virtual Linux**, or even **Git Bash**.
+
 <h2>The learning goals for this part</h2>
 
 The goal is that after this part the student
@@ -32,7 +34,6 @@ The goal is that after this part the student
 - Can handle output on the command line
   - The pipe \|
   - \> and \>\>
-- Can create an SSH key pair and establish an SSH connection to another system.
 - Can search content from the internet using the command line
   - wget
 - Can read the output of the command ls -l.
