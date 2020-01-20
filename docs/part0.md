@@ -68,13 +68,13 @@ user@computer:~$
 The text in front of **@** is your username on the computer, and the following text before **:** is the computer's name. The executable command is written to the space pointed by the blinking cursor, and run by pressing <kbd>Enter</kbd>.
 
 
-Note that in the instructions found online a <code>$</code>-symbol is often included in front of the command. The dollar sign is used to indicate that the command should be run in the command line as a normal user. You should not include it in the command.
+Note that in the instructions found online a **$**-symbol is often included in front of the command. The dollar sign is used to indicate that the command should be run in the command line as a normal user. You should not include it in the command.
 
 
 
-![A MacOS terminal](/assets/mac_terminal.png){:class="img-responsive"}
+![A MacOS terminal](../assets/mac_terminal.png){:class="img-responsive"}
 
-![A Linux terminal](/assets/ubuntu_terminal.jpg){:class="img-responsive"}
+![A Linux terminal](../assets/ubuntu_terminal.jpg){:class="img-responsive"}
 
 You can see the default terminals for MacOS and Ubuntu above.
 
@@ -119,14 +119,14 @@ The computer suggests similar programs, and finally advises to install the progr
 
 Let's take a look at the **man** page for the command **ls**. Running the command **man ls** on the command line will yield the following:
 
-![man page for ls](/assets/man.png)
+![man page for ls](../assets/man.png)
 
 Even though man pages can be hard to read for beginners, they usually offer the most comprehensive documentation available for a specific command.
 
 The "name" section gives you an overall understanding about that the command does. "Synopsis" tells how you can call the program. In the case of the command **ls** for example, the options should be given to the command before the file path. Both the options and the file name are optional parameters, which is why they're written inside square brackets.
 
 
-You can browse the <code>man</code> page using the arrow keys, and exit by pressing <code>q</code>.
+You can browse the **man** page using the arrow keys, and exit by pressing **q**.
 
 
 Options are sometimes given two forms: a short form, which is usually just one character, and a long one. The short form is given to the command with just one dash (**-**), and the long form using two dashes (**--**). The **man** page displays both options, as you can see in the image above.
@@ -210,7 +210,7 @@ You can mark this exercise as done after you've gone through the previous exampl
 
 
 <h3>Exercise 2: Creating a folder {% include points.html text="5%" %}</h3>
-Create a folder named "lapio" in your home folder. Make sure you created the folder correctly by checking the output of <code>ls</code>.
+Create a folder named "lapio" in your home folder. Make sure you created the folder correctly by checking the output of **ls**.
 
 
 <h2>Tips for using the command line more efficiently</h2>
@@ -236,32 +236,32 @@ In order to close the editor, you have to press <kbd>CTRL + X</kbd>. If some cha
 Note that **nano** helps you by telling the keys for specific actions at each step. This is rather common, which is why it is important to learn to read the outputs of the command you are using (as simple and stupid as it may sound). Usually the program tells your directly, which keys you should press next.
 
 
-If you see the error message  <code>nano: command not found</code>, nano is not installed in your system. The easiest way to install it is by using a package manager. See the end of the part for some instructions on installing applications via the command line.
+If you see the error message  **nano: command not found**, nano is not installed in your system. The easiest way to install it is by using a package manager. See the end of the part for some instructions on installing applications via the command line.
 
 
 
-In Windows you can use a program called notepad instead of gedit. It should be installed to your system by default. However, we recommend the <a href="https://notepad-plus-plus.org/">notepad++</a> editor. Windows handles line breaks differently from Unix systems: In Windows, the line break symbol is <code>\r\n</code> whereas in Unix it's <code>\n</code>. Thus inspecting Windows documents created with notepad can look bizarre when accessing them using the Ubuntu command line.
+In Windows you can use a program called notepad instead of gedit. It should be installed to your system by default. However, we recommend the <a href="https://notepad-plus-plus.org/">notepad++</a> editor. Windows handles line breaks differently from Unix systems: In Windows, the line break symbol is **\r\n** whereas in Unix it's **\n**. Thus inspecting Windows documents created with notepad can look bizarre when accessing them using the Ubuntu command line.
 
 <br/><br/>
 Below are some instructions on creating a file using notepad++ with Unix new lines.
 
-<img alt="Changing the new line symbol with notepad++" src="/assets/notepad++_lf.png" />
+<img alt="Changing the new line symbol with notepad++" src="../assets/notepad++_lf.png" />
 <br/>
 
-Note that the file you created with notepad has been created as a Windows user. In Windows 10, the command line is used as a separate Unix user. You can find the Windows user's files from the directory <code>/mnt/c</code>, if you saved them to the C drive.
+Note that the file you created with notepad has been created as a Windows user. In Windows 10, the command line is used as a separate Unix user. You can find the Windows user's files from the directory **/mnt/c**, if you saved them to the C drive.
 
 
 
 <h3>Exercise 3: nano {% include points.html text="5%" %}</h3>
 
-Find out how the text editor <code>nano</code> works by using Google or the <code>man</code> command. Make sure you know how to do at least the following things:
+Find out how the text editor **nano** works by using Google or the **man** command. Make sure you know how to do at least the following things:
 
 <ul>
 <li> Sainvg a file without closing nano</li>
 <li> Copying and pasteing in nano</li>
 </ul>
 
-Test out the procedures in practice! For example, open a file <code>example.txt</code>, add some text into it and save without closing. Then open the file using another text editor to make sure that the contents were saved.
+Test out the procedures in practice! For example, open a file **example.txt**, add some text into it and save without closing. Then open the file using another text editor to make sure that the contents were saved.
 
 
 
@@ -314,20 +314,20 @@ cat2.jpg
 
 In this exercise you'll practice file management from the command line. Start by creating a folder structure described in the figure below:
 
-<img src="/assets/file_management_1.png" alt="Figure describing the starting position"/>
+<img src="../assets/file_management_1.png" alt="Figure describing the starting position"/>
 
 <p>
-In the folder structure the directory <code>school</code> contains three folders: <code>lapio</code>, <code>CS1</code> and <code>CS2</code>. The <code>lapio</code> folder contains a file called <code>cmnd-line.txt</code>, the <code>CS1</code> folder contains <code>lecture1.txt</code> and the <code>CS2</code> folder contains the files <code>lecture2.txt</code> and <code>java.txt</code>.
+In the folder structure the directory **school** contains three folders: **lapio**, **CS1** and **CS2**. The **lapio** folder contains a file called **cmnd-line.txt**, the **CS1** folder contains **lecture1.txt** and the **CS2** folder contains the files **lecture2.txt** and **java.txt**.
 
 <br><br>
 
-First create the <code>school</code> folder and move inside it. Then create the folder structure described above. Create some of the files and folders directly from the <code>school</code> folder, by using longer paths, and some by moving into the subfolder before creating a new file.
+First create the **school** folder and move inside it. Then create the folder structure described above. Create some of the files and folders directly from the **school** folder, by using longer paths, and some by moving into the subfolder before creating a new file.
 </p>
 
 <p class="note">
-You can create a text file by opening it in a text editor and saving, or with the command <code>touch</code>.</p>
+You can create a text file by opening it in a text editor and saving, or with the command **touch**.</p>
 
-Make sure you've created all the proper files and folders with <code>ls</code>.
+Make sure you've created all the proper files and folders with **ls**.
 
 Remember to use tab completion!
 
@@ -357,26 +357,26 @@ Examples of using **mv**:
 
 This exercise continues where the previous exercise left off.
 
-After creating the initial folder structure, change it to the following with commands <code>mv</code> and <code>cp</code>:
+After creating the initial folder structure, change it to the following with commands **mv** and **cp**:
 
-<p><img src="/assets/file_management_2.png" alt="Target folder structure"/></p>
+<p><img src="../assets/file_management_2.png" alt="Target folder structure"/></p>
 
-The folder <code>lapio</code> should now contain a file called <code>command-line.txt</code>. The folder <code>CS1</code> should contain a file called <code>intro.txt</code>, and the folder <code>CS2</code> the files <code>lecture1.txt</code> and <code>lecture2.txt</code>.
+The folder **lapio** should now contain a file called **command-line.txt**. The folder **CS1** should contain a file called **intro.txt**, and the folder **CS2** the files **lecture1.txt** and **lecture2.txt**.
 
 <br><br>
 
-Notice that the awkward typo in <code>cmnd-line.txt</code> has been fixed. The file <code>java.txt</code> was moved to the folder <code>CS1</code> and renamed.
+Notice that the awkward typo in **cmnd-line.txt** has been fixed. The file **java.txt** was moved to the folder **CS1** and renamed.
 
 
 
 <h3>Exercise 7: Removing a folder {% include points.html text="5%" %}</h3>
 
-Files can be removed with the command <code>rm</code> (<b>r</b>e<b>m</b>ove).
+Files can be removed with the command **rm** (<b>r</b>e<b>m</b>ove).
 
 <ol>
 <li>By using the command line, remove the files you created in the previous exercise. </li>
 <li>Find out how you can remove a folder from the command line.</li>
-<li>Remove the whole <code>school</code> folder.</li>
+<li>Remove the whole **school** folder.</li>
 </ol>
 Note that when you remove something on the command line, it is not moved to the rubbish bin, but deleted right away.
 
@@ -397,7 +397,7 @@ target toinen.png
 
 
 <h3>Exercise 8: Wild cards {% include points.html text="10%" %}</h3>
-Create a folder called <i>pictures</i> on the command line, and download a <code>jpg</code> and a <code>png</code> formatted pictures. Then add some text files to the folder, for example <code>i_am_a_file.txt</code> or <code>i_am_not_a_picture.txt</code>. Finally create a folder called <code>pictures</code> and copy all the pictures in the subfolder using wild cards. You can read about other wild cards from <a href="http://www.linfo.org/wildcard.html">here</a> for example.
+Create a folder called <i>pictures</i> on the command line, and download a **jpg** and a **png** formatted pictures. Then add some text files to the folder, for example **i_am_a_file.txt** or **i_am_not_a_picture.txt**. Finally create a folder called **pictures** and copy all the pictures in the subfolder using wild cards. You can read about other wild cards from <a href="http://www.linfo.org/wildcard.html">here</a> for example.
 
 
 <h2> Other useful commands</h2>
@@ -446,14 +446,14 @@ I won't be secretive, I'm so happy!
 ```
 
 Note that the filtering also included occurences inside another string. In most environments grep also highlights the found words with red:
-![grep-example](/assets/secret.png){:class="img-responsive"}
+![grep-example](../assets/secret.png){:class="img-responsive"}
 
 
 <h3>Exercise 9: grep {% include points.html text="10%" %}</h3>
-By default <code>grep</code> is case sensitive, which means that it treats "a" and "A" differently when searching for matches.
+By default **grep** is case sensitive, which means that it treats "a" and "A" differently when searching for matches.
 
 <ul>
-<li>Take a look at the output of <code>grep --help</code> or grep's <code>man</code> page, and find out how you can make grep ignore case.</li>
+<li>Take a look at the output of **grep --help** or grep's **man** page, and find out how you can make grep ignore case.</li>
 
 <li>Find out (using Google for example) how you can only match occurences which are at the beginning of a line. Make sure you understood how to do this, by practicing using the command on the command line. You can for example write the following to a file:</li>
 </ul>
@@ -510,12 +510,12 @@ user@hal9000:~/example$
 ```
 
 
-The operator <code>></code> overwrites the contents of the file with the given text and <code>>></code> appends them to a new line, not affecting the old contents.
+The operator **>** overwrites the contents of the file with the given text and **>>** appends them to a new line, not affecting the old contents.
 
 
 
 <h3>Exercise 10: A Student's Notes {% include points.html text="5%" %}</h3>
-Create a text file called <code>notes.txt</code> on the command line. Paste inside the following text which describes the week of a typical student:
+Create a text file called **notes.txt** on the command line. Paste inside the following text which describes the week of a typical student:
 
 ```
 monday intro to java: Java is a programming language
@@ -531,7 +531,7 @@ thursday lapio: The command line is a black box
 friday unicafe: Pizza
 ```
 
-Then separate the menu of this week to its own file <code>unicafe.txt</code>. You don't have to remove the menu from the <code>notes</code> file. Also separate the notes concerning the course Introduction to Java.
+Then separate the menu of this week to its own file **unicafe.txt**. You don't have to remove the menu from the **notes** file. Also separate the notes concerning the course Introduction to Java.
 
 
 <h2> SSH connection</h2>
@@ -609,9 +609,9 @@ Authentication with an SSH key pair is possible, when the public key is added to
 
 Here is a picture of the correct locations of the keys when logging in to the department's servers with an SSH key pair:
 
-![About using an SSH key pair](/assets/ssh-explanation.png){:class="img-responsive"}
+![About using an SSH key pair](../assets/ssh-explanation.png){:class="img-responsive"}
 
-The public key can be moved to the remote server with the command <code>scp</code> for example, which allows copying files between two distinct systems (**cp** was for copying inside the local system). The command is used in the following way:
+The public key can be moved to the remote server with the command **scp** for example, which allows copying files between two distinct systems (**cp** was for copying inside the local system). The command is used in the following way:
 
 ```
 scp path/to/copyable/file user@palvelmen.osoite:path/to/target/folder
@@ -621,12 +621,12 @@ Notice the colon between the remote server's address and the target path!
 
 
 
-You can for example copy the public key to the <code>.ssh</code> file on the remote server (you'll probably have to create it yourself) and then rename the key file appropriately.
+You can for example copy the public key to the **.ssh** file on the remote server (you'll probably have to create it yourself) and then rename the key file appropriately.
 
 
 <br/>
 <i>
-It's also a good idea to see how <code>scp</code> works if the target file doesn't exist.
+It's also a good idea to see how **scp** works if the target file doesn't exist.
 </i>
 
 
@@ -675,8 +675,8 @@ The command required to download something from the internet is **wget** (_world
 <h3>Exercise 12: Wget and HTML code {% include points.html text="5%" %}</h3>
 
 <ol>
-<li>Download a site of your liking to your computer using <code>wget</code>.</li>
-<li>Open the <code>.html</code> extensioned file using a graphical browser like Firefox or Chrome (try clicking it in the graphical file browser). The site will most likely look different from what you're used to. </li>
+<li>Download a site of your liking to your computer using **wget**.</li>
+<li>Open the **.html** extensioned file using a graphical browser like Firefox or Chrome (try clicking it in the graphical file browser). The site will most likely look different from what you're used to. </li>
 <li> Open the file in such a way that allows you to see the actual HTML code. In other words, open the file using something other than a browser. The code has a lot of tags marked with "<" and ">", and one of the first ones should contain "html".</li>
 <li>What was the program you used to open the file in each case? Think about how the program processed the file (in a very general way).</li>
 </ol>
@@ -693,8 +693,8 @@ The goal of this exercise is to count how many lines of the Wikipedia article ab
 </p>
 
 <ol>
-<li>Download the <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia article</a> about Linus Torvalds to your computer using <code>wget</code>.</li>
-<li>Using <code>grep</code>, filter out the lines containing the word "Linux". Write the lines to a new file.</li>
+<li>Download the <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia article</a> about Linus Torvalds to your computer using **wget**.</li>
+<li>Using **grep**, filter out the lines containing the word "Linux". Write the lines to a new file.</li>
 <li>Search online how you can count the lines of a file using the command line. Count the number of lines in the file you created.</li>
 </ol>
 
@@ -735,7 +735,7 @@ Next one can see the owner and the group of a file. In this case the group of th
 In the example above the **notes.txt** file's owner has read, write and execute permissions. The group and others only have the read permission. The **diary** directory has read, write and execute permissions only for its owner, the group and others don't have any permissions. The file **article.txt** can be read by everyone, but it can't be read or edited by anyone.
 
 
-![A picture depicting the components of the output of ls -l](/assets/permission-exp.png){:class="img-responsive"}
+![A picture depicting the components of the output of ls -l](../assets/permission-exp.png){:class="img-responsive"}
 
 Permissions can be changed by the file owner or the system administrator. They can be altered with the command **chmod** (_change mode_). It takes a string describing the alterations and the target file path as arguments. The permission string tells which permissions are added or removed, and who the permissions concern.
 
@@ -780,19 +780,19 @@ drw-r--r-- 1 user user 130 Jun 14 17:54 diary
 
 <h3>Exercise 14: Practising permissions {% include points.html text="10%" %}</h3>
 
-Create a file called <code>permission.txt</code> and practise giving and removing permissions. Define the file's permissions to be each of the following:
+Create a file called **permission.txt** and practise giving and removing permissions. Define the file's permissions to be each of the following:
 
 <pre>
-<code>
+**
 -rwxr--r--
 -rw-r--r--
 -rw-------
 -r-xrw--w-
-</code>
+**
 </pre>
 
 
-If you're doing the exercise on one of the department's computers, do it in the following path: <code>/cs/home/your_uni_username</code>. If the folder is not found, (you get <code>No such file or directory</code> when trying to <code>cd</code> into it), please activate your CS account following<a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> these </a> instructions.
+If you're doing the exercise on one of the department's computers, do it in the following path: **/cs/home/your_uni_username**. If the folder is not found, (you get **No such file or directory** when trying to **cd** into it), please activate your CS account following<a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> these </a> instructions.
 
 
 

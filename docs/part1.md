@@ -308,7 +308,7 @@ The command takes the name and the address of the remote repository as arguments
 
 We'll choose the SSH address for the remote project:
 
-![SSH address in GitHub](/assets/ssh-clone.png)
+![SSH address in GitHub](../assets/ssh-clone.png)
 
 A new repository called "origin" is added using an SSH connection by running the command **git remote add origin git@github.com:user/project.git**. An HTTPS address would be almost identical to the URL in your browser. A remote can be called practically anything besides "origin", but it is a good and a common choice. It is possible to add several remotes, when properly naming them becomes important.
 <h3>Exercise 5: SSH key to GitHub {% include points.html text="5%" %}</h3>
@@ -355,7 +355,7 @@ There now exists two versions of the project: one locally, and one in the remote
 
 We'll start by making changes to the project via GitHub. You can edit files via GitHub by clicking on their name and then clicking on the pen icon on the right side of the page.
 
-![Pen icon at GitHub](/assets/edit.png)
+![Pen icon at GitHub](../assets/edit.png)
 
 Next we'll add a new line of text to **lapio_w2.txt**, and create a commit of the change using the green button at the bottom of the page. However, you can't see these changes locally.
 
@@ -587,19 +587,19 @@ GitHub provides arguably the easiest tool to examine a project's commit history.
 
 Let's navigate to our project's front page. At approximately the center of the page you should see a bar, whose upper left corner has a tab allowing you to view the old commits. Here the tab says "4 commits".
 
-![Commits in GitHub](/assets/commits.png)
+![Commits in GitHub](../assets/commits.png)
 
 When you click on the tab, you'll see a list of all the commits which have been added to the project. There are three buttons on the right side of this view.
 
-![Viewing a commit](/assets/browse-commit.png)
+![Viewing a commit](../assets/browse-commit.png)
 
 The button at the center of those three shows the beginning of a given commit's id. Pressing the button shows all the changes made in that particular commit. The additions are shown in green, and removed lines in red.
 
-![Viewing changes](/assets/show-commit-en.png)
+![Viewing changes](../assets/show-commit-en.png)
 
 Then by pressing "Browse files", or the rightmost button with **<>** written on it from the previous view, you can browse the state of the project after a specific commit. A commit only contains a set of changes, but Git still enables revisiting the whole project after a given commit. You can return back to the latest commit of the master branch by pressing the "tree" button on the left, and by choosing "master".
 
-![Change back to master](/assets/back-to-master.png)
+![Change back to master](../assets/back-to-master.png)
 
 Of course, the same procedure can be repeated on the command line. You can browse the state of the project after a specific commit by running **git checkout commit_id**. You should check the id using **git log** for example. Similarly, you can move back to a specific branch by running **git checkout branch_name**, most commonly **git checkout master**. The changes made in a specific commit can be viewed with **git show commit_id**.
 <h3>Exercise 12: A Secret {% include points.html text="10%" %}</h3>
@@ -624,7 +624,7 @@ Sites like GitHub make collaboraton in development projects a lot easier. No one
 
 If one knows the solution to a problem, they can even suggest their own improvements to the project. However, this requires having access to the source code of the project. A public project can be copied to a local computer with the command **git clone**. The command takes the address of the remote repository, which can be acquired from the upper right corner of the project page, as an argument. 
 
-![Cloning address](/assets/clone.png)
+![Cloning address](../assets/clone.png)
 
 Note that this is actually the same address you used before when adding a remote repository with the command **git remote add**. The owner of a project will not know who has cloned their project.
 
