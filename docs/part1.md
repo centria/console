@@ -116,14 +116,14 @@ Let's go through how a commit is created. First, the changes one wants to includ
 
 The command **git status** will turn out to be very useful in the process of creating commits, as it gives information avout the current state of the project and all the files inside it.
 
-Let's create a Git project folder, and add an empty file called **lapio_w2.txt** inside. You can do this with the command **touch** for example. When a new file is added to a fresh Git project, **git status** will print the following:
+Let's create a Git project folder, and add an empty file called **tools.txt** inside. You can do this with the command **touch** for example. When a new file is added to a fresh Git project, **git status** will print the following:
 
 ```console
 On branch master
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	lapio_w2.txt
+	tools.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -134,20 +134,20 @@ Next we'll take a closer look on the output of **git status**.
 
 Changes can be added to the next commit by running **git add**. The command requires one argument, that is the path to the file containing the changes one wishes to move to staging and consequently include in the next commit. Before a file has been added to Git, it is under **Untracked files**. This also means that the changes inside that file will not be added to the next commit.
 
-Now let's add the changes in the file we created earler by running **git add lapio_w2.txt**. Then we'll insert some text into the file with **echo "this is the second part of lapio" >> lapio_w2.txt**. Then we'll run **git status**:
+Now let's add the changes in the file we created earler by running **git add tools.txt**. Then we'll insert some text into the file with **echo "this is the second part of tools" >> tools.txt**. Then we'll run **git status**:
 
 ```console
 On branch master
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-	new file:   lapio_w2.txt
+	new file:   tools.txt
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   lapio_w2.txt
+	modified:   tools.txt
 ```
 
 Next we'll add one more file to the project, called **empty.txt**. We'll then run **git status** again, which outputs the following:
@@ -157,13 +157,13 @@ On branch master
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-	new file:   lapio_w2.txt
+	new file:   tools.txt
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   lapio_w2.txt
+	modified:   tools.txt
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -179,9 +179,9 @@ The first title is called **Changes to be committed.** The changes under this ti
 
 Finally **Untracked files** contains all the files which are unknown to Git, meaning that the changes inside them are not being followed. For example, Git cannot distinguish what sort of changes have been done to the untracked files. In consequence, the changes are not being added to the next commit.
 
-You probably noticed that the file **lapio_w2** is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file **lapio_w2** was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file **lapio_w2** was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of **git status** is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example **new file**, **modified**, **deleted**).
+You probably noticed that the file **tools** is in the output twice. This is because Git tracks _changes_. The first change added to Git was where the file **tools** was created. Only after adding the change to Git was some text insterted into the file. Thus only the change where the file **tools** was created will be added to the next commit, and not the change when some text was added inside it. The interpretation of the output of **git status** is made easier with some colors. The changes which will be added to the next commit are displayed in green, and next to the filename is written what was done to the file (for example **new file**, **modified**, **deleted**).
 
-Changes can also be cancelled with Git. Adding some text to **lapio_w2.txt** could be cancelled by running **git checkout -- lapio_w2.txt**. The file will be empty after running the command because the command cancelled the change which added some text into **lapio_w2.txt**. In conclusion, the command **git checkout --** enables cancelling changes in tracked files.
+Changes can also be cancelled with Git. Adding some text to **tools.txt** could be cancelled by running **git checkout -- tools.txt**. The file will be empty after running the command because the command cancelled the change which added some text into **tools.txt**. In conclusion, the command **git checkout --** enables cancelling changes in tracked files.
 
 By running **git add -p** one can choose change by change, which ones to add to the next commit (y=add, n=don't add). The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with **git add -p**. Running **git add file** will add all the changes in the file. It is also possible to add entire folders to Git using the same command.
 
@@ -204,7 +204,7 @@ On branch master
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-	new file:   lapio_w2.txt
+	new file:   tools.txt
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -212,7 +212,7 @@ Untracked files:
 	empty.txt
 ```
 
-Then we'll run **git commit -m "Add new lapio file"**
+Then we'll run **git commit -m "Add new tools file"**
 
 Now the output of **git status** is:
 
@@ -233,7 +233,7 @@ commit 51bf544c786a671c28f70713b6cb33d87cc38
 Author:
 Date:
 
-    Add new lapio file
+    Add new tools file
 ```
 
 The command **git log** outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of **git log** the id can be seen as a long string next to the word "commit", which is **51bf544c786a671c28f70713b6cb33d87cc38** in this case.
@@ -248,16 +248,17 @@ The process of creating a commit might seem unintuitive at first. The following 
 At the top of of the output of **git status**, you can see the following text: **On branch master**. Branches allow separating some commits from others. This means that a new branch can be developed independently from an old branch. It is customary for projects to have a main branch, usually called the **master** branch, containing the version currently in use.
 
 Branches are usually used for testing out new features without breaking a working version of the program. Since branches don't affect each other states, the new branch can be played with without worrying about other ones. When the changes made to the new branch are deemed ready, the branch can be merged to the master branch, and thus the new features will be published. Although branches are an important part of Git, this course will not focus on using them. It suffices to understand that we will only use the master branch in the exercises and in the exam.
+
 <h3>Exercise 3: Practising working with commits </h3>
 <ol>
 <li>Create a folder on the command line and turn it into a Git project.</li>
-<li>Create a file called **story.txt** in your project. Add a lot of text inside.</li>
-<li>Add another file called **shopping_list.txt** to the project, and write down what you need from the store (or just many rows of text).</li>
-<li>Create a subfolder called **school** into the project, and create a file called**lapio.txt** inside. You will need these files in the future exercises.</li>
+<li>Create a file called "story.txt" in your project. Add a lot of text inside.</li>
+<li>Add another file called "shopping_list.txt" to the project, and write down what you need from the store (or just many rows of text).</li>
+<li>Create a subfolder called "school" into the project, and create a file called "tools.txt" inside. You will need these files in the future exercises.</li>
 <li>After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.</li>
-<li>Using the command **git log**, check that you have properly created three commits.</li>
-<li>Add something new to the shopping list, and create another commit. Use the command **git add -p**.</li>
-<li>Make sure you can see all the commits in the output of **git log**.</li>
+<li>Using the command "git log", check that you have properly created three commits.</li>
+<li>Add something new to the shopping list, and create another commit. Use the command "git add -p".</li>
+<li>Make sure you can see all the commits in the output of "git log".</li>
 </ol>
 
 
@@ -268,7 +269,7 @@ If you see the following message when creating a commit **error: cannot run : No
 
 <h3>Exercise 4: Removing changes </h3>
 <ol>
-<li>Find out how you can remove changes from the state where they are being added to the next commit (under **Changes to be commited**), and move them under the headline **Changes not staged for commit**? Hint: **git status** will help.</li>
+<li>Find out how you can remove changes from the state where they are being added to the next commit (under "Changes to be commited"), and move them under the headline "Changes not staged for commit"? Hint: git status will help.</li>
 <li>Add some new products to the shopping list, and add them to the next commit (so that they are under **Changes to be commited**). <strong>Don't create the commit yet.</strong></li>
 <li>Then remove the changes from the next commit.</li>
 <li>Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.</li>
@@ -342,7 +343,7 @@ After a project has been added to a repository in GitHub, commits can be publish
 
 Changes can be pushed to a specific branch in the remote repository as follows: **git push remotename branchname**. In this part we will only use the master branch. If you add the flag **-u** after the command **push**, next time you do not need to specify the name of the remote and the branch to push changes to the same place. Using the flag **-u** is recommended.
 
-Let's push the changes we made to the file **lapio_w2.txt** by running **git push -u origin master**, since we named the remote **origin** and we are using the master branch. Next we'll navigate to the project site on GitHub. There we will find the file **lapio_w2.txt**.
+Let's push the changes we made to the file **tools.txt** by running **git push -u origin master**, since we named the remote **origin** and we are using the master branch. Next we'll navigate to the project site on GitHub. There we will find the file **tools.txt**.
 
 
 <h3>Exercise 7: Publishing a commit</h3>
@@ -361,7 +362,7 @@ We'll start by making changes to the project via GitHub. You can edit files via 
 
 ![Pen icon at GitHub](../assets/edit.png)
 
-Next we'll add a new line of text to **lapio_w2.txt**, and create a commit of the change using the green button at the bottom of the page. However, you can't see these changes locally.
+Next we'll add a new line of text to **tools.txt**, and create a commit of the change using the green button at the bottom of the page. However, you can't see these changes locally.
 
 We'll run the following commands:
 
@@ -370,7 +371,7 @@ git fetch
 git status
 ```
 
-The command **git fetch** fetches the newest state of the project from GitHub, but doesn't change the local version. **If you find that **git status** doesn't show up-to-date information about the state of the remote, you should run **git fetch** first.**
+The command **git fetch** fetches the newest state of the project from GitHub, but doesn't change the local version. **If you find that** git status **doesn't show up-to-date information about the state of the remote, you should run** git fetch **first.**
 
 We still can't see the new line of text locally. However, if you pushed with the flag **-u**, Git will notice that the remote repository contains some changes it doesn't see locally:  **Your branch is behind 'origin/master'**is printed at the top of the status output.
 
@@ -386,7 +387,7 @@ From github.com
    8793615..c661629  master     -> origin/master
 Updating 8793615..c661629
 Fast-forward
- lapio_w2.txt | 1 +
+ tools.txt | 1 +
  1 file changed, 1 insertion(+)
 ```
 
@@ -404,7 +405,7 @@ In practice the situation handled above corresponds to working on a collaborativ
 
 Next we'll find out what happens, if GitHub contains some information not found in the local version, and vice versa.
 
-Let's change the first row of **lapio_w2.txt** via GitHub. This will create a new commit to the remote version. Then let's add a new line at the end of the same file in the local version, **but without creating a new commit of the new change**.
+Let's change the first row of **tools.txt** via GitHub. This will create a new commit to the remote version. Then let's add a new line at the end of the same file in the local version, **but without creating a new commit of the new change**.
 
 Now if we try to fetch the latest changes with the command **git pull** we'll get:
 
@@ -413,7 +414,7 @@ From github.com:
  * branch            master     -> FETCH_HEAD
 Updating 061ca96..6920cd0
 error: Your local changes to the following files would be overwritten by merge:
-	lapio_w2.txt
+	tools.txt
 Please, commit your changes or stash them before you can merge.
 Aborting
 ```
@@ -425,13 +426,13 @@ In situations like this one can put the local changes aside to the _stash_. This
 
 <h3>Exercise 9: Using stash when pulling from the remote</h3>
 <ol>
-<li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline **untracked** in the output of **git status**).</li>
+<li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline **untracked** in the output of git status).</li>
 <li>Stash the changes you just made using Git.</li>
 <li>Open the files you last and check if you can still see the changes</li>
-<li>Edit the <i>first</i> sentence of the file **story.txt** in GitHub and create a commit.</li>
+<li>Edit the <i>first</i> sentence of the file story.txt in GitHub and create a commit.</li>
 <li>Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.</li>
-<li>Fetch the changes you made to **story.txt** in the remote repository to the local version. Use the stash.</li>
-<li>After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of **story.txt**.</li>
+<li>Fetch the changes you made to story.txt in the remote repository to the local version. Use the stash.</li>
+<li>After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of story.txt.</li>
 <li>Push the end result to GitHub.</li>
 <li>Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.</li>
 
@@ -512,17 +513,17 @@ If you see "CONFLICT" printed out while pulling, read the next section "Merge Co
 
 When several people are working on the same project, it is not uncommon for two developers to make changes to the same lines in some file. When merging the two changes together, how does Git know which of the changes to discard and which one to keep? Well, it doesn't, and so when mutually exclusive changes are found when merging, the automatic merge will fail. The conflict between two commits (or branches) is called a _merge conflict_. In these cases, someone has to hand pick the changes which will be kept in the project. This is called resolving a merge conflict.
 
-Next we'll create a merge conflict. We'll start by writing "Greetings from GitHub" to a line in the **lapio_w2.txt** file via GitHub, and finish off by creating a commit. Then we'll edit the _exact_ same line locally by replacing it with "Greetings from my computer", and wrap the change up to another commit.
+Next we'll create a merge conflict. We'll start by writing "Greetings from GitHub" to a line in the **tools.txt** file via GitHub, and finish off by creating a commit. Then we'll edit the _exact_ same line locally by replacing it with "Greetings from my computer", and wrap the change up to another commit.
 
 Now when we try to combine the newest states from the remote and local versions together with **git pull**, we get the following error message:
 
 ```console
 Auto-merging ...
-CONFLICT (content): Merge conflict in lapio_w2.txt
+CONFLICT (content): Merge conflict in tools.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-This means that we have successfully created a merge conflict. The line starting with **CONFLICT** tells us where the overlapping changes can be found. Let's open the file in question, **lapio_w2.txt**. We see the following:
+This means that we have successfully created a merge conflict. The line starting with **CONFLICT** tells us where the overlapping changes can be found. Let's open the file in question, **tools.txt**. We see the following:
 
 ```console
 <<<<<< HEAD
@@ -555,7 +556,7 @@ You have unmerged paths.
 Unmerged paths:
  (use "git add <file>..." to mark resolution)
 
-	both modified:   lapio_w2.txt
+	both modified:   tools.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -569,7 +570,7 @@ All conflicts fixed but you are still merging.
 
 Changes to be committed:
 
-	modified:   lapio_w2.txt
+	modified:   tools.txt
 ```
 
 Finally, we'll wrap up resolving the conflicts by, you guessed it, creating a new commit. The finishing touch is to push the result to GitHub, so that other developers can use the newest version.
@@ -615,7 +616,7 @@ Of course, the same procedure can be repeated on the command line. You can brows
 
 <h3>Exercise 12: A Secret</h3>
 <ol>
-<li>Create a new file to you project called **secret.txt**, and write something inside such as "this is a very important secret".</li>
+<li>Create a new file to you project called "secret.txt", and write something inside such as "this is a very important secret".</li>
 <li>Create a new commit of the new file and the contents added to it.</li>
 <li>Then remove the file **secret.txt**, and create a new commit of the deletition.</li>
 <li>Push the changes to GitHub.</li>

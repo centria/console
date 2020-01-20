@@ -138,7 +138,7 @@ Note that if you want to give a command an argument containing spaces, it has to
 ls "i am a badly named file"
 ```
 
-tai
+or
 
 ```
 ls 'i am a badly named file'
@@ -211,7 +211,7 @@ You can mark this exercise as done after you've gone through the previous exampl
 
 
 <h3>Exercise 2: Creating a folder</h3>
-Create a folder named "lapio" in your home folder. Make sure you created the folder correctly by checking the output of **ls**.
+Create a folder named "tools" in your home folder. Make sure you created the folder correctly by checking the output of **ls**.
 
 
 <h2>Tips for using the command line more efficiently</h2>
@@ -228,9 +228,9 @@ Another useful trick to know is browsing old commands. This can be done by press
 
 Gedit is a simple graphical text editor, which allows you to edit all kinds of text files. You can find Gedit in Linux by writing "gedit" to the Launcher, opened by pressing the "Windows" key. In MacOS we recommend using the application "TextEdit" for this section of the material, as it allows defining the saving location of a file, and you will be able to find it easily using the command line.
 
-Open a graphical text editor and create a file called **example.txt**. Save it in the **lapio** folder you created earlier. The **.txt** is a file extension, which means that the file contains ordinary text, and not runnable code for example. Add some arbitrary text to the file.
+Open a graphical text editor and create a file called **example.txt**. Save it in the **tools** folder you created earlier. The **.txt** is a file extension, which means that the file contains ordinary text, and not runnable code for example. Add some arbitrary text to the file.
 
-After creating the **example.txt** file, navigate to the **lapio** folder and open it using the command **nano example.txt**. Nano is a text-based text editor, which is used from the command line. This means that the editor is controlled using specific key combinations instead of clicking buttons.
+After creating the **example.txt** file, navigate to the **tools** folder and open it using the command **nano example.txt**. Nano is a text-based text editor, which is used from the command line. This means that the editor is controlled using specific key combinations instead of clicking buttons.
 
 In order to close the editor, you have to press <kbd>CTRL + X</kbd>. If some changes have been made, you have to confirm whether you wish to save or discard them, by pressing **y** for "yes" or **n** for "no". Lastly, the editor confirms the name of the saved file.
 
@@ -318,7 +318,7 @@ In this exercise you'll practice file management from the command line. Start by
 <img src="../assets/file_management_1.png" alt="Figure describing the starting position"/>
 
 <p>
-In the folder structure the directory **school** contains three folders: **lapio**, **CS1** and **CS2**. The **lapio** folder contains a file called **cmnd-line.txt**, the **CS1** folder contains **lecture1.txt** and the **CS2** folder contains the files **lecture2.txt** and **java.txt**.
+In the folder structure the directory **school** contains three folders: **tools**, **CS1** and **CS2**. The **tools** folder contains a file called **cmnd-line.txt**, the **CS1** folder contains **lecture1.txt** and the **CS2** folder contains the files **lecture2.txt** and **java.txt**.
 
 <br><br>
 
@@ -362,7 +362,7 @@ After creating the initial folder structure, change it to the following with com
 
 <p><img src="../assets/file_management_2.png" alt="Target folder structure"/></p>
 
-The folder **lapio** should now contain a file called **command-line.txt**. The folder **CS1** should contain a file called **intro.txt**, and the folder **CS2** the files **lecture1.txt** and **lecture2.txt**.
+The folder **tools** should now contain a file called **command-line.txt**. The folder **CS1** should contain a file called **intro.txt**, and the folder **CS2** the files **lecture1.txt** and **lecture2.txt**.
 
 <br><br>
 
@@ -377,7 +377,7 @@ Files can be removed with the command **rm** (<b>r</b>e<b>m</b>ove).
 <ol>
 <li>By using the command line, remove the files you created in the previous exercise. </li>
 <li>Find out how you can remove a folder from the command line.</li>
-<li>Remove the whole **school** folder.</li>
+<li>Remove the whole "school" folder.</li>
 </ol>
 Note that when you remove something on the command line, it is not moved to the rubbish bin, but deleted right away.
 
@@ -462,10 +462,11 @@ Note that the filtering also included occurences inside another string. In most 
 
 
 <h3>Exercise 9: grep</h3>
-By default **grep** is case sensitive, which means that it treats "a" and "A" differently when searching for matches.
+
+By default "grep" is case sensitive, which means that it treats "a" and "A" differently when searching for matches.
 
 <ul>
-<li>Take a look at the output of **grep --help** or grep's **man** page, and find out how you can make grep ignore case.</li>
+<li>Take a look at the output of "grep --help" or grep's "man" page, and find out how you can make grep ignore case.</li>
 
 <li>Find out (using Google for example) how you can only match occurences which are at the beginning of a line. Make sure you understood how to do this, by practicing using the command on the command line. You can for example write the following to a file:</li>
 </ul>
@@ -531,20 +532,20 @@ The operator **>** overwrites the contents of the file with the given text and *
 Create a text file called **notes.txt** on the command line. Paste inside the following text which describes the week of a typical student:
 
 ```console
-monday intro to java: Java is a programming language
-monday unicafe: Fish shoup
-tuesday intro to java: A class can implement an interface
+monday intro to cs: Hello world
+monday cafeteria: Fish shoup
+tuesday intro to cs: A class can implement an interface
 tuesday intro to cs: Turing tests are hard to pass
-tuesday unicafe: Chicken and noodles
-wednesday intro to java: A java program has to have a main method
+tuesday cafeteria: Chicken and noodles
+wednesday intro to cs: A cs program has to have a main method
 wednesday intro to cs: The internet is a big place
-wednesday unicafe: beans and rice
-thursday unicafe: Hernekeittoa ja pannukakkua
-thursday lapio: The command line is a black box
-friday unicafe: Pizza
+wednesday cafeteria: beans and rice
+thursday cafeteria: Potatos and gravy
+thursday console: The command line is a black box
+friday cafeteria: Pizza
 ```
 
-Then separate the menu of this week to its own file **unicafe.txt**. You don't have to remove the menu from the **notes** file. Also separate the notes concerning the course Introduction to Java.
+Then separate the menu of this week to its own file **cafeteria.txt**. You don't have to remove the menu from the **notes** file. Also separate the notes concerning the course Introduction to Java.
 
 
 
@@ -556,11 +557,11 @@ You are probably using a browser like Firefox or Google Chrome to read this mate
 The command required to download something from the internet is **wget** (_world wide web get_). The simplest way to download a site at **site.address** is with **wget site.address**. Websites are written in a language called HTML, which you will learn more about in the third part of this course. Thus the file you will download has the extension **.html**.
 
 
-<h3>11: Wget and HTML code {% include points.html text="5%" %}</h3>
+<h3>Exercise 11: Wget and HTML code</h3>
 
 <ol>
-<li>Download a site of your liking to your computer using **wget**.</li>
-<li>Open the **.html** extensioned file using a graphical browser like Firefox or Chrome (try clicking it in the graphical file browser). The site will most likely look different from what you're used to. </li>
+<li>Download a site of your liking to your computer using "wget".</li>
+<li>Open the .html extensioned file using a graphical browser like Firefox or Chrome (try clicking it in the graphical file browser). The site will most likely look different from what you're used to. </li>
 <li> Open the file in such a way that allows you to see the actual HTML code. In other words, open the file using something other than a browser. The code has a lot of tags marked with "<" and ">", and one of the first ones should contain "html".</li>
 <li>What was the program you used to open the file in each case? Think about how the program processed the file (in a very general way).</li>
 </ol>
@@ -570,7 +571,7 @@ You'll learn how to write HTML documents in the third part of the course.
 
 
 
-<h3>Exercise 11: Wget, grep and Linus Torvalds </h3>
+<h3>Exercise 12: Wget, grep and Linus Torvalds </h3>
 
 <p>
 The goal of this exercise is to count how many lines of the Wikipedia article about Linus Torvalds contains the word "Linux".
@@ -578,7 +579,7 @@ The goal of this exercise is to count how many lines of the Wikipedia article ab
 
 <ol>
 <li>Download the <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia article</a> about Linus Torvalds to your computer using **wget**.</li>
-<li>Using **grep**, filter out the lines containing the word "Linux". Write the lines to a new file.</li>
+<li>Using "grep", filter out the lines containing the word "Linux". Write the lines to a new file.</li>
 <li>Search online how you can count the lines of a file using the command line. Count the number of lines in the file you created.</li>
 </ol>
 
@@ -662,18 +663,18 @@ drw-r--r-- 1 user user 130 Jun 14 17:54 diary
 ```
 
 
-<h3>Exercise 12: Practising permissions</h3>
+<h3>Exercise 13: Practising permissions</h3>
 
 Create a file called **permission.txt** and practise giving and removing permissions. Define the file's permissions to be each of the following:
 
-<pre>
+```console
 **
 -rwxr--r--
 -rw-r--r--
 -rw-------
 -r-xrw--w-
 **
-</pre>
+```
 
 You can read more about permissions for example [here](https://csguide.cs.princeton.edu/account/groups).
 
@@ -710,7 +711,7 @@ Note however, that some things act differently when used in scripts. For example
 Remember that in order to run a file, it has to be given execute permissions with the command **chmod.**
 
 
-<h3>Exercise 13: A small bash script</h3>
+<h3>Exercise 14: A small bash script</h3>
 
 <ol>
 <li>Find out how you can print text to the standard output in Bash. </li>
@@ -775,7 +776,7 @@ Now take a break. You can pat yourself in the back! Then revisit the material an
 This was only an introduction to the command line. There are several other tools, tricks and commands which were not covered. You will learn them once you need them. Here are some quick tips which might come in handy sometime:
 
 - **watch**: repeat a command in certain intervals
-- **&&** tai **;**: chain several commands
+- **&&** or **;**: chain several commands
 - **alias**: define an alias for a command. For example you can define a shorter version for a long and complicated command.
 - **&**: ending a command with this will make sure the command line will not be locked as the process will be moved to the background
 - **history**: view your command history
