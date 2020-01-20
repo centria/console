@@ -286,7 +286,7 @@ This shows how GitHub functions as a backup storage. When the state of a project
 
 You can create a repository to GitHub by pressing the button on the upper right corner:
 
-![Creating a new repository](/assets/new-repo.png)
+![Creating a new repository](../assets/new-repo.png)
 
 A window will open where you can add the repository a name and a description. A repository can be public or private: a public repository can be accessed by anyone, whereas a private repository can only be seen by people chosen by the owner.
 
