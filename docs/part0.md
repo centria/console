@@ -51,9 +51,9 @@ You are probably used to using computers in a certain way. Creating, searching a
 
 The former is an example of a _graphical user interface_ (GUI): The possible actions are presented in some sort of menu and chosen by clicking. Files can also be drag and dropped to new places. Contrary to the graphical user interface, the command line is a _text-based user interface_. This means that one does not use the mouse for choosing specific actions. Instead, the computer is given commands by writing them and pressing enter. The options are not presented in the same way as in a graphical environment, and one can get by without using the mouse at all.
 
-<div class="note">
+
 The command line can also be called the <i>terminal</i>. It's also sometimes referred to as the <i>shell</i> or <i>console</i>.
-</div>
+
 
 There was a time when a text-based user interface was the only possible way to use a computer. Nowadays graphical user interfaces are common and work quite well. However, the command line remains a vital tool for programmers. For lots of tools created for programmers, a GUI doesn't exist, and using the command line is the only option. In addition, a GUI can be tediously slow for some use cases, when handling large amounts of data for example.
 
@@ -67,9 +67,9 @@ user@computer:~$
 
 The text in front of **@** is your username on the computer, and the following text before **:** is the computer's name. The executable command is written to the space pointed by the blinking cursor, and run by pressing <kbd>Enter</kbd>.
 
-<div class="note">
+
 Note that in the instructions found online a <code>$</code>-symbol is often included in front of the command. The dollar sign is used to indicate that the command should be run in the command line as a normal user. You should not include it in the command.
-</div>
+
 
 
 ![A MacOS terminal](/assets/mac_terminal.png){:class="img-responsive"}
@@ -125,9 +125,9 @@ Even though man pages can be hard to read for beginners, they usually offer the 
 
 The "name" section gives you an overall understanding about that the command does. "Synopsis" tells how you can call the program. In the case of the command **ls** for example, the options should be given to the command before the file path. Both the options and the file name are optional parameters, which is why they're written inside square brackets.
 
-<div class="note">
+
 You can browse the <code>man</code> page using the arrow keys, and exit by pressing <code>q</code>.
-</div>
+
 
 Options are sometimes given two forms: a short form, which is usually just one character, and a long one. The short form is given to the command with just one dash (**-**), and the long form using two dashes (**--**). The **man** page displays both options, as you can see in the image above.
 
@@ -143,9 +143,9 @@ tai
 ls 'i am a badly named file'
 ```
 
-<div class="note">
+
 The names of commands are usually abbreviations of english words. "man" stands for "manual", "ls" for "list", and so on. You can find the origins for some commands in this material, in the hope of making them easier to remember.
-</div>
+
 
 <h2> File management using the command line</h2>
 
@@ -155,15 +155,15 @@ Open the graphical file browser. In ubuntu, open the application called "Files",
 
 You should now be in your _home folder_. The home folder holds all the personal files and folders of a user. If you are using one of the department's computers, the contents of your home folders are the same regardless of which physical computer you are using. This is because the contents are fetched from elsewhere. If you are using your personal computer, the home folder only includes the files on that physical computer.
 
-<div class="note">
+
 If using Windows Subsystem for Linux (or Ubuntu application), note that your Linux home is different than Windows home. If you need to access files or folders in your Windows home navigate to /mnt/c/Users/username (using cd /mnt/c/Users/username). Also note that most of the time directory ~ will refer to your Linux home
-</div>
+
 
 Note that if you opened the graphical file browser using the command line, the shell is "locked", and you can't run any other commands using that window. You can close the currently running program by pressing <kbd>CTRL + C</kbd>. You can press the keys repeatedly if necessary.
 
-<div class="note">
+
 Because the combination <kbd>CTRL + C</kbd> has a special meaning on the command line, in Linux you will have to use <kbd>CTRL + SHIFT + C</kbd> to copy selected text and <kbd>CTRL + SHIFT + V</kbd> to paste.
-</div>
+
 
 Your home folder probably contains a bunch of miscellanous files and folders, like _Downloads_ and _Documents_. Open the command line in order to see the same folders on the text-based interface. You can do this by writing **ls** on the command line and pressing <kbd>ENTER</kbd>. The output should something like this:
 
@@ -203,15 +203,15 @@ In the graphical user interface, you can create folders by right-clicking with y
 
 In the end, the command line works in a similar way to the graphical user interface: **cd** is the same as clicking a folder and **ls** shows the contents of a folder. In this part, you will learn how to things you already know how to do in a graphical environment using the command line.
 
-<div class="exercise">
+
 <h3>Exercise 1: Graphical vs. text-based user interface {% include points.html text="5%" %}</h3>
 
-You can mark this exercise as done after you've gone through the previous example of the differences between the graphical and text-based user interfaces. Make sure you replicated the examples yourself using the command line.</div>
+You can mark this exercise as done after you've gone through the previous example of the differences between the graphical and text-based user interfaces. Make sure you replicated the examples yourself using the command line.
 
-<div class="exercise">
+
 <h3>Exercise 2: Creating a folder {% include points.html text="5%" %}</h3>
 Create a folder named "lapio" in your home folder. Make sure you created the folder correctly by checking the output of <code>ls</code>.
-</div>
+
 
 <h2>Tips for using the command line more efficiently</h2>
 
@@ -235,11 +235,11 @@ In order to close the editor, you have to press <kbd>CTRL + X</kbd>. If some cha
 
 Note that **nano** helps you by telling the keys for specific actions at each step. This is rather common, which is why it is important to learn to read the outputs of the command you are using (as simple and stupid as it may sound). Usually the program tells your directly, which keys you should press next.
 
-<div class="note">
-If you see the error message  <code>nano: command not found</code>, nano is not installed in your system. The easiest way to install it is by using a package manager. See the end of the part for some instructions on installing applications via the command line.
-</div>
 
-<div class="note">
+If you see the error message  <code>nano: command not found</code>, nano is not installed in your system. The easiest way to install it is by using a package manager. See the end of the part for some instructions on installing applications via the command line.
+
+
+
 In Windows you can use a program called notepad instead of gedit. It should be installed to your system by default. However, we recommend the <a href="https://notepad-plus-plus.org/">notepad++</a> editor. Windows handles line breaks differently from Unix systems: In Windows, the line break symbol is <code>\r\n</code> whereas in Unix it's <code>\n</code>. Thus inspecting Windows documents created with notepad can look bizarre when accessing them using the Ubuntu command line.
 
 <br/><br/>
@@ -249,9 +249,9 @@ Below are some instructions on creating a file using notepad++ with Unix new lin
 <br/>
 
 Note that the file you created with notepad has been created as a Windows user. In Windows 10, the command line is used as a separate Unix user. You can find the Windows user's files from the directory <code>/mnt/c</code>, if you saved them to the C drive.
-</div>
 
-<div class="exercise">
+
+
 <h3>Exercise 3: nano {% include points.html text="5%" %}</h3>
 
 Find out how the text editor <code>nano</code> works by using Google or the <code>man</code> command. Make sure you know how to do at least the following things:
@@ -263,9 +263,9 @@ Find out how the text editor <code>nano</code> works by using Google or the <cod
 
 Test out the procedures in practice! For example, open a file <code>example.txt</code>, add some text into it and save without closing. Then open the file using another text editor to make sure that the contents were saved.
 
-</div>
 
-<div class="exercise">
+
+
 <h3>Exercise 4: vim {% include points.html text="5%" %}</h3>
 
 Another command line text editor with a lot more features is <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>. However, it is notoriously unintuitive to use for beginners. Find out the following things about using vim:
@@ -275,7 +275,7 @@ Another command line text editor with a lot more features is <a href="https://en
 <li>How can you switch between then?</li>
 <li>How can you close vim? <br></li>
 </ul>
-</div>
+
 
 <h2> Paths</h2>
 
@@ -283,9 +283,9 @@ A path is a pointer to a specific file or folder in a file system. It is like an
 
 A path can be _relative_ or _absolute_: A relative path is interpreted with respect to the current folder, whereas an absolute path is interpreted with respect to the _root folder_, sometimes just called _the root_. The root folder contains all the files and folders of the system, and it should not be confused with the personal _home folder_. The root folder contains all the users' home folders. In consequence, an absolute path to a specific file is the same no matter which folder in the system it is written in. On the contrary, a relative path to a folder depends on the current folder, so it is not the same everywhere.
 
-<div class="warning">
+
 Be careful with the root! Some of it's contents are vital to the computer. Don't delete or move folders in the root without a good reason.
-</div>
+
 
 An absolute path always starts with the slash symbol **/**, because the absolute path of the root is **/**. If a path isn't started with a slash the system will interpret that the user is referring to a file or folder in the current working directory. The absolute path of the current folder can be printed out with **pwd** (**p**rint **w**orking **d**irectory). In Linux the home folder of a user is usually located in **/home/user/**, and in MacOS it's in **/Users/user/**. In both systems the home folder can be referred to with **~**. For example, the path to the Downloads folder in Linux would be either **/home/user/Downloads** or **~/Downloads**.
 
@@ -305,11 +305,11 @@ user@computer:~/Downloads/cat-pictures/november$ ls
 cat2.jpg
 ```
 
-<div class="note">
-<strong>Remember to use tab completion when writing paths!</strong> Always check if you can complete the next component of the path automatically before writing it yourself. In addition, the command line shows you the path of the current folder with respect to your home folder. This makes it easier to navigate and write paths in the command line.
-</div>
 
-<div class="exercise">
+<strong>Remember to use tab completion when writing paths!</strong> Always check if you can complete the next component of the path automatically before writing it yourself. In addition, the command line shows you the path of the current folder with respect to your home folder. This makes it easier to navigate and write paths in the command line.
+
+
+
 <h3>Exercise 5: File management 1 {% include points.html text="5%" %}</h3>
 
 In this exercise you'll practice file management from the command line. Start by creating a folder structure described in the figure below:
@@ -330,7 +330,7 @@ You can create a text file by opening it in a text editor and saving, or with th
 Make sure you've created all the proper files and folders with <code>ls</code>.
 
 Remember to use tab completion!
-</div>
+
 
 
 <h2> Moving and renaming files</h2>
@@ -352,7 +352,7 @@ Examples of using **mv**:
 
 **mv ~/example.txt ~/Downloads/** moves the file **example.txt** from the home folder to the **Downloads** folder.
 
-<div class="exercise">
+
 <h3>Exercise 6: File management 2 {% include points.html text="5%" %}</h3>
 
 This exercise continues where the previous exercise left off.
@@ -366,9 +366,9 @@ The folder <code>lapio</code> should now contain a file called <code>command-lin
 <br><br>
 
 Notice that the awkward typo in <code>cmnd-line.txt</code> has been fixed. The file <code>java.txt</code> was moved to the folder <code>CS1</code> and renamed.
-</div>
 
-<div class="exercise">
+
+
 <h3>Exercise 7: Removing a folder {% include points.html text="5%" %}</h3>
 
 Files can be removed with the command <code>rm</code> (<b>r</b>e<b>m</b>ove).
@@ -378,9 +378,9 @@ Files can be removed with the command <code>rm</code> (<b>r</b>e<b>m</b>ove).
 <li>Find out how you can remove a folder from the command line.</li>
 <li>Remove the whole <code>school</code> folder.</li>
 </ol>
-<div class="warning">Note that when you remove something on the command line, it is not moved to the rubbish bin, but deleted right away.</div>
+Note that when you remove something on the command line, it is not moved to the rubbish bin, but deleted right away.
 
-</div>
+
 
 <h2> Wild cards</h2>
 
@@ -395,10 +395,10 @@ user@hal9000:~/example$ ls
 target toinen.png
 ```
 
-<div class="exercise">
+
 <h3>Exercise 8: Wild cards {% include points.html text="10%" %}</h3>
 Create a folder called <i>pictures</i> on the command line, and download a <code>jpg</code> and a <code>png</code> formatted pictures. Then add some text files to the folder, for example <code>i_am_a_file.txt</code> or <code>i_am_not_a_picture.txt</code>. Finally create a folder called <code>pictures</code> and copy all the pictures in the subfolder using wild cards. You can read about other wild cards from <a href="http://www.linfo.org/wildcard.html">here</a> for example.
-</div>
+
 
 <h2> Other useful commands</h2>
 
@@ -448,7 +448,7 @@ I won't be secretive, I'm so happy!
 Note that the filtering also included occurences inside another string. In most environments grep also highlights the found words with red:
 ![grep-example](/assets/secret.png){:class="img-responsive"}
 
-<div class="exercise">
+
 <h3>Exercise 9: grep {% include points.html text="10%" %}</h3>
 By default <code>grep</code> is case sensitive, which means that it treats "a" and "A" differently when searching for matches.
 
@@ -470,11 +470,11 @@ unix
 unisport
 </pre>
 and then make sure you can filter out the appropriate words with grep.
-</div>
 
-<div class="note">
+
+
 When looking for information on the internet about any commands, always make sure you test out their functionality on the command line. This makes it easier to notice if you've misunderstood something.
-</div>
+
 
 The true power of tools like **grep** comes out when it is paired with other commands. The output of another command can be passed on to another command with the operator **|**, usually called _the pipe_. With the pipe you can do more complicated operations which require several programs with just one line.
 
@@ -509,14 +509,14 @@ Downloads
 user@hal9000:~/example$ 
 ```
 
-<div class="note">
-The operator <code>></code> overwrites the contents of the file with the given text and <code>>></code> appends them to a new line, not affecting the old contents.
-</div>
 
-<div class="exercise">
+The operator <code>></code> overwrites the contents of the file with the given text and <code>>></code> appends them to a new line, not affecting the old contents.
+
+
+
 <h3>Exercise 10: A Student's Notes {% include points.html text="5%" %}</h3>
 Create a text file called <code>notes.txt</code> on the command line. Paste inside the following text which describes the week of a typical student:
-</div>
+
 ```
 monday intro to java: Java is a programming language
 monday unicafe: Fish shoup
@@ -530,9 +530,9 @@ thursday unicafe: Hernekeittoa ja pannukakkua
 thursday lapio: The command line is a black box
 friday unicafe: Pizza
 ```
-<div class="exercise">
+
 Then separate the menu of this week to its own file <code>unicafe.txt</code>. You don't have to remove the menu from the <code>notes</code> file. Also separate the notes concerning the course Introduction to Java.
-</div>
+
 
 <h2> SSH connection</h2>
 
@@ -556,7 +556,7 @@ user@hal9000:~$ ssh user@melkki.cs.helsinki.fi
 user@melkki.cs.helsinki.fi's password:
 ```
 
-<div class="note">Note that it's normal for text not to appear when you are inserting your password.</div>
+Note that it's normal for text not to appear when you are inserting your password.
 
 When connecting to a system for the first time, an error message will be displayed, stating that the server is not yet trusted. If you write **yes** to indicate that the server is trusted, its fingerprint will be remembered. Even though SSH is encrypted, it is not totally attack proof (as nothing in the internet generally is). If you receive this message when using a public internet for example, it could be safer not to establish a connection, since you could be the victim of an attack.
 
@@ -577,7 +577,7 @@ When using the ssh command in the previous section, you authenticated yourself w
 You can create an SSH key pair with the command **ssh-keygen**. The command asks for a password and a location for the key. We recommend not changing the default location of a key pair without a specific reason. The default location is the **.ssh** folder in the current user's home directory.
 
 
-<div class="warning">Always use a password when creating an SSH key pair. If you use an SSH key with the department's servers, you have to set a password according to the department's rules.</div>
+Always use a password when creating an SSH key pair. If you use an SSH key with the department's servers, you have to set a password according to the department's rules.
 
 ```
 user@hal9000$ ssh-keygen
@@ -619,7 +619,7 @@ scp path/to/copyable/file user@palvelmen.osoite:path/to/target/folder
 
 Notice the colon between the remote server's address and the target path!
 
-<div class="note">
+
 
 You can for example copy the public key to the <code>.ssh</code> file on the remote server (you'll probably have to create it yourself) and then rename the key file appropriately.
 
@@ -628,7 +628,7 @@ You can for example copy the public key to the <code>.ssh</code> file on the rem
 <i>
 It's also a good idea to see how <code>scp</code> works if the target file doesn't exist.
 </i>
-</div>
+
 
 Copying the public key file can also be delegated to the command [ssh-copy-id](https://www.ssh.com/ssh/copy-id).
 
@@ -644,24 +644,26 @@ eval $(ssh-agent -s)
 ssh-add
 ```
 
-<div class="exercise">
+
 <h3>Exercise 11: SSH connection {% include points.html text="10%" %}</h3>
 
 Create an SSH key pair on your computer. Then enable logging in to the department's servers with the key when establishing an SSH connection. Finally test out the key pair. 
 
 If possible, do this using other than the department's computers. If you don't have access to the department's servers, i.e. you do not have a university account, you can mark the exercise done after generating the SSH key pair.
 
-<div class="note">
-If you do the exercise using a department's computer, the connection is likely to act weirdly, because the connection is actually established to the same system. The password of the SSH key  might not be asked even if you had set it correctly.
-</div>
 
-<div class="note">
+If you do the exercise using a department's computer, the connection is likely to act weirdly, because the connection is actually established to the same system. The password of the SSH key  might not be asked even if you had set it correctly.
+
+
+
 If you defined the location of the key pair yourself, and the connection still asks for your university password, specify the path to the private key:
-<div>
-<code>ssh -i path/to/private/key user@remote.server.address</code>
-</div>
-</div>
-</div>
+
+```console
+ssh -i path/to/private/key user@remote.server.address
+```
+
+
+
 
 <h2> Wget</h2>
 
@@ -669,7 +671,7 @@ You are probably using a browser like Firefox or Google Chrome to read this mate
 
 The command required to download something from the internet is **wget** (_world wide web get_). The simplest way to download a site at **site.address** is with **wget site.address**. Websites are written in a language called HTML, which you will learn more about in the third part of this course. Thus the file you will download has the extension **.html**.
 
-<div class="exercise">
+
 <h3>Exercise 12: Wget and HTML code {% include points.html text="5%" %}</h3>
 
 <ol>
@@ -681,9 +683,9 @@ The command required to download something from the internet is **wget** (_world
 
 You'll learn how to write HTML documents in the third part of the course.
 
-</div>
 
-<div class="exercise">
+
+
 <h3>Exercise 13: Wget, grep and Linus Torvalds {% include points.html text="10%" %}</h3>
 
 <p>
@@ -697,7 +699,7 @@ The goal of this exercise is to count how many lines of the Wikipedia article ab
 </ol>
 
 If you wish, you can do the same exercise without writing anyting to a separate file in between.
-</div>
+
 
 <h2> Permissions</h2>
 
@@ -775,7 +777,7 @@ total 8
 drw-r--r-- 1 user user 130 Jun 14 17:54 diary
 ```
 
-<div class="exercise">
+
 <h3>Exercise 14: Practising permissions {% include points.html text="10%" %}</h3>
 
 Create a file called <code>permission.txt</code> and practise giving and removing permissions. Define the file's permissions to be each of the following:
@@ -789,16 +791,16 @@ Create a file called <code>permission.txt</code> and practise giving and removin
 </code>
 </pre>
 
-<div class="note">
+
 If you're doing the exercise on one of the department's computers, do it in the following path: <code>/cs/home/your_uni_username</code>. If the folder is not found, (you get <code>No such file or directory</code> when trying to <code>cd</code> into it), please activate your CS account following<a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> these </a> instructions.
-</div>
-</div>
+
+
 
 You can read more about permissions for example [here](https://csguide.cs.princeton.edu/account/groups).
 
-<div class="warning">
+
 Be careful with permissions! Giving too loose permissions is a security threat. You usually only need write and execute permissions yourself.
-</div>
+
 
 <h2>Scripts</h2>
 
@@ -828,7 +830,7 @@ Note however, that some things act differently when used in scripts. For example
 
 Remember that in order to run a file, it has to be given execute permissions with the command **chmod.**
 
-<div class="exercise">
+
 <h3>Exercise 15: A small bash script {% include points.html text="5%" %}</h3>
 
 <ol>
@@ -837,7 +839,7 @@ Remember that in order to run a file, it has to be given execute permissions wit
 <li> Run the script and make sure it works properly, i.e. there are no errors and "Hello World" appears to the terminal.</li>
 <li>Try to find out why the first programming exercises usually involve printing "Hello world!".</li >
 </ol>
-</div>
+
 
 
 <h2> Sudo</h2>
@@ -848,7 +850,7 @@ However, a regular user can run commands with the privileges of a superuser, if 
 
 **You shouldn't try to run **sudo** commands on the department's computers**, such as the ones found in the computer labs or when connected via SSH. This will be logged as malicious behaviour.
 
-<div class="warning"> Don't for example copy a command from the internet which starts with the word "sudo" if you don't know what it does. Otherwise you are giving full privileges to an unknown program in your system.</div>
+ Don't for example copy a command from the internet which starts with the word "sudo" if you don't know what it does. Otherwise you are giving full privileges to an unknown program in your system.
 
 <h2>Installing</h2>
 

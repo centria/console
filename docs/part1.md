@@ -37,6 +37,7 @@ published: true
 <li>Know what a pull request is.</li>
 </ul>
 </ul>
+
 </div>
 
 ## Version control: Git and GitHub
@@ -61,8 +62,6 @@ GitHub is a service which was created later on, used for storing and publishing 
 
 Git and GitHub are used in solo as well as collaborative projects at University and in the industry. It's usage isn't limited only to code, and many people like to for example backup their thesis using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
 
-
-<div class="exercise">
 <h3>Exercise 1: Creating a GitHub account {% include points.html text="5%" %}</h3>
 
 Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
@@ -70,35 +69,38 @@ Start by creating a GitHub account at <a href="https://github.com/"> https://git
 <br><br>
 Git should be already installed on the department's computers and Ubuntu. If this is not the case, you can install it according to these  <a href="https://git-scm.com/downloads" >instructions</a>, or using a <a href="/command-line#installing">package manager</a>.  We'll learn how to use the command line client of Git.
 
-</div>
 
-<div class="exercise">
+
 <h3>Exercise 2: Configuring Git {% include points.html text="5%" %}</h3>
 
 Let's configure Git a bit.
 
 Link your name and email address to Git so that all the changes you make to different projects are properly associated with you. This can be done by running the following commands with your own personal details:
 
+
 ```console
 git config --global user.name "My Name"
 git config --global user.email email@address.com
 ```
 
+
 If you don't want your email to be public, GitHub offers a specific <a href="https://help.github.com/en/articles/setting-your-commit-email-address">noreply email</a>.
 
-<div class="note">
+
 Make sure you noticed the "Note" part on the site linked above! The form of the noreply email depends on when you created your user. If you created an account only on this course, you can have a no-reply email only after setting your email as private from your account's settings.
-</div>
+
+
 
 If you're not accustomed to using Vim, change the default editor of Git to nano with the following command:
 
-```bash
+```console
 git config --global core.editor nano
 ```
 
 In Windows replace **nano** with **notepad**.
 
-</div>
+
+
 
 ## Starting a Git project
 
@@ -116,7 +118,7 @@ The command **git status** will turn out to be very useful in the process of cre
 
 Let's create a Git project folder, and add an empty file called **lapio_w2.txt** inside. You can do this with the command **touch** for example. When a new file is added to a fresh Git project, **git status** will print the following:
 
-```bash
+```console
 On branch master
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -134,7 +136,7 @@ Changes can be added to the next commit by running **git add**. The command requ
 
 Now let's add the changes in the file we created earler by running **git add lapio_w2.txt**. Then we'll insert some text into the file with **echo "this is the second part of lapio" >> lapio_w2.txt**. Then we'll run **git status**:
 
-```bash
+```console
 On branch master
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
@@ -150,7 +152,7 @@ Changes not staged for commit:
 
 Next we'll add one more file to the project, called **empty.txt**. We'll then run **git status** again, which outputs the following:
 
-```bash
+```console
 On branch master
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
@@ -197,7 +199,7 @@ After choosing which changes will be included in the next commit, you can finall
 
 We'll continue where the previous example left off. Let's add all the changes we made to the next commit, except the creation of the file **empty.txt**. Before running **git commit**, the output of **git status** is:
 
-```bash
+```console
 On branch master
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
@@ -236,17 +238,16 @@ Date:
 
 The command **git log** outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of **git log** the id can be seen as a long string next to the word "commit", which is **51bf544c786a671c28f70713b6cb33d87cc38** in this case.
 
-<div class="note">
+
 The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title **Changes to be commited**  is a piece of wrapping paper, which is spread out in front of you. With the command **git add** you can move the wooden blocks representing changes on top of the wrapping paper, and with **git commit** you tie the wrapper aroung the changes to create a commit.
-</div>
+
+
 
 ### Branches
 
 At the top of of the output of **git status**, you can see the following text: **On branch master**. Branches allow separating some commits from others. This means that a new branch can be developed independently from an old branch. It is customary for projects to have a main branch, usually called the **master** branch, containing the version currently in use.
 
 Branches are usually used for testing out new features without breaking a working version of the program. Since branches don't affect each other states, the new branch can be played with without worrying about other ones. When the changes made to the new branch are deemed ready, the branch can be merged to the master branch, and thus the new features will be published. Although branches are an important part of Git, this course will not focus on using them. It suffices to understand that we will only use the master branch in the exercises and in the exam.
-
-<div class="exercise">
 <h3>Exercise 3: Practising working with commits {% include points.html text="10%" %}</h3>
 <ol>
 <li>Create a folder on the command line and turn it into a Git project.</li>
@@ -259,12 +260,12 @@ Branches are usually used for testing out new features without breaking a workin
 <li>Make sure you can see all the commits in the output of **git log**.</li>
 </ol>
 
-<div class="note">
-If you see the following message when creating a commit **error: cannot run : No such file or directory error: unable to start editor**, make sure you configured the default text editor of Git properly (go back to exercise 2).
-</div>
-</div>
 
-<div class="exercise">
+If you see the following message when creating a commit **error: cannot run : No such file or directory error: unable to start editor**, make sure you configured the default text editor of Git properly (go back to exercise 2).
+
+
+
+
 <h3>Exercise 4: Removing changes {% include points.html text="10%" %}</h3>
 <ol>
 <li>Find out how you can remove changes from the state where they are being added to the next commit (under **Changes to be commited**), and move them under the headline **Changes not staged for commit**? Hint: **git status** will help.</li>
@@ -272,7 +273,8 @@ If you see the following message when creating a commit **error: cannot run : No
 <li>Then remove the changes from the next commit.</li>
 <li>Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.</li>
 </ol>
-</div>
+
+
 
 ## Sharing code via GitHub
 
@@ -309,8 +311,6 @@ We'll choose the SSH address for the remote project:
 ![SSH address in GitHub](/assets/ssh-clone.png)
 
 A new repository called "origin" is added using an SSH connection by running the command **git remote add origin git@github.com:user/project.git**. An HTTPS address would be almost identical to the URL in your browser. A remote can be called practically anything besides "origin", but it is a good and a common choice. It is possible to add several remotes, when properly naming them becomes important.
-
-<div class="exercise">
 <h3>Exercise 5: SSH key to GitHub {% include points.html text="5%" %}</h3>
 <p>
 If you haven't created an SSH key pair on your computer, do it first. The instructions can be found from <a href="/command-line">the first part</a>.
@@ -321,9 +321,8 @@ Add your public SSH key to your GitHub account. <a href="https://help.github.com
 <p class="note">
 If you don't want to install a new program (as suggested by the instructions), you can print the SSH key to your terminal with the command **cat**, copy it by hand, and continue following GitHub's instructions from step 2.
 </p>
-</div>
 
-<div class="exercise">
+
 <h3>Exercise 6: Creating a remote in GitHub {% include points.html text="5%" %}</h3>
 <p>Create a remote repository for the project you created locally. </p>
 
@@ -332,7 +331,8 @@ If you don't want to install a new program (as suggested by the instructions), y
 <p>
 
 Add the repository as a remote to your project. If you did the previous exercise, use an SSH address, otherwise use HTTPS.</p>
-</div>
+
+
 
 ### Publishing
 
@@ -341,14 +341,13 @@ After a project has been added to a repository in GitHub, commits can be publish
 Changes can be pushed to a specific branch in the remote repository as follows: **git push remotename branchname**. In this part we will only use the master branch. If you add the flag **-u** after the command **push**, next time you do not need to specify the name of the remote and the branch to push changes to the same place. Using the flag **-u** is recommended.
 
 Let's push the changes we made to the file **lapio_w2.txt** by running **git push -u origin master**, since we named the remote **origin** and we are using the master branch. Next we'll navigate to the project site on GitHub. There we will find the file **lapio_w2.txt**.
-
-<div class="exercise">
 <h3>Exercise 7: Publishing a commit {% include points.html text="5%" %}</h3>
 <ol>
 <li>Push the three commits you made earlier to the master branch of the remote repository.</li>
 <li>Check on GitHub that you can find all the changes in the remote.</li>
 </ol>
-</div>
+
+
 
 ### Fetching code from GitHub
 
@@ -362,7 +361,7 @@ Next we'll add a new line of text to **lapio_w2.txt**, and create a commit of th
 
 We'll run the following commands:
 
-```bash
+```console
 git fetch
 git status
 ```
@@ -373,7 +372,7 @@ We still can't see the new line of text locally. However, if you pushed with the
 
 You can get the new changes to the local version by running **git pull**. If you used the flag **-u** with **push** earlier, there is no need to specify a remote or a branch. We'll run **git pull**, which results in an output along the lines of the following:
 
-```bash
+```console
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
@@ -388,11 +387,10 @@ Fast-forward
 ```
 
 Now you can find the new line of text in the file you changed via GitHub.
-
-<div class="exercise">
 <h3>Exercise 8: Fetching code from GitHub {% include points.html text="5%" %}</h3>
 Create a new file to the school subfolder via GitHub, and fetch it to your local version.
-</div>
+
+
 
 In practice the situation handled above corresponds to working on a collaborative project, where someone else has added commits to the project and pushed them to GitHub. Other developers should then fetch the new changes with the command **git pull**.
 
@@ -404,7 +402,7 @@ Let's change the first row of **lapio_w2.txt** via GitHub. This will create a ne
 
 Now if we try to fetch the latest changes with the command **git pull** we'll get:
 
-```bash
+```console
 From github.com:
  * branch            master     -> FETCH_HEAD
 Updating 061ca96..6920cd0
@@ -417,8 +415,6 @@ Aborting
 Pulling the new commit from the remote does not work, because the local verison holds changes to the same file as the remote repository, and the local changes have not been wrapped into a commit.
 
 In situations like this one can put the local changes aside to the _stash_. This is done with the command **git stash**. When the command is run, the local changes in files tracked by Git will by hidden, but not lost completely. In order to also stash changes in untracked files, add the flag **-u**. Changes can be returned from the stash by running **git stash pop**.
-
-<div class="exercise">
 <h3>Exercise 9: Using stash when pulling from the remote {% include points.html text="10%" %}</h3>
 <ol>
 <li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline **untracked** in the output of **git status**).</li>
@@ -430,11 +426,13 @@ In situations like this one can put the local changes aside to the _stash_. This
 <li>After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of **story.txt**.</li>
 <li>Push the end result to GitHub.</li>
 <li>Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.</li>
-<div class="note">
+
 If you see "CONFLICT" outputted to the terminal when popping changes from the stash, the section "Merge Conflicts" will help.
-</div>
+
+
 </ol>
-</div>
+
+
 
 ## Merge
 
@@ -458,9 +456,10 @@ nothing to commit, working directory clean
 
 Notice how Git is kind enough to notify us of the two parallel, differing states, and it even advices us on how to proceed.
 
-<div class="note">
+
 Remember that if **git status** doesn't display the newest state of the remote, you shoud run **git fetch** first.
-</div>
+
+
 
 Pushing the now commits will not work, as the command **git push** will output the following:
 
@@ -486,19 +485,19 @@ Merge made by the 'recursive' strategy.
 ```
 
 Now according to the output of **git status** we have  created two commits, (**ahead by 2 commits**). The first one is the commit we created locally, which added one new file to the project, and the other one is the merge conflict. Pushing the two commits to GitHub should not result in any errors.
-
-<div class="exercise">
 <h3>Exercise 10: Merging {% include points.html text="5%" %}</h3>
 <ol>
 <li>Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.</li>
 <li>Try pushing the local commit to the remote repository and observer the error message.</li>
 <li>Pull the commit from the remote repository to your local version and write "my first merge" as the commit message.</li>
-<div class="note">
+
 If you see "CONFLICT" printed out while pulling, read the next section "Merge Conflicts".
-</div>
+
+
 <li>Finally, push all the changes to GitHub.</li>
 </ol>
-</div>
+
+
 
 ## Merge Conflicts
 
@@ -508,7 +507,7 @@ Next we'll create a merge conflict. We'll start by writing "Greetings from GitHu
 
 Now when we try to combine the newest states from the remote and local versions together with **git pull**, we get the following error message:
 
-```bash
+```console
 Auto-merging ...
 CONFLICT (content): Merge conflict in lapio_w2.txt
 Automatic merge failed; fix conflicts and then commit the result.
@@ -516,7 +515,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 This means that we have successfully created a merge conflict. The line starting with **CONFLICT** tells us where the overlapping changes can be found. Let's open the file in question, **lapio_w2.txt**. We see the following:
 
-```bash
+```console
 <<<<<< HEAD
 Greetings from my computer
 ======
@@ -569,12 +568,11 @@ Finally, we'll wrap up resolving the conflicts by, you guessed it, creating a ne
 Merge conflicts are enfuriating, but rather common when collaborating with others. The easiest way to avoid them is by making sure to always start developing on the newest version from the remote, i.e. by pulling before starting development. However, sometimes they cannot be avoided, in which case one must patiently go through the conflicting files.
 
 Merge conflicts can also occur when taking changes out of the stash, if the hidden changes overlap with new ones.
-
-<div class="exercise">
 <h3>Exercise 11: A Merge Conflict {% include points.html text="10%" %}</h3>
 
 Create a merge conflict in your project and resolve it. Make sure to push the end result to GitHub.
-</div>
+
+
 
 ## Commit history
 
@@ -604,8 +602,6 @@ Then by pressing "Browse files", or the rightmost button with **<>** written on 
 ![Change back to master](/assets/back-to-master.png)
 
 Of course, the same procedure can be repeated on the command line. You can browse the state of the project after a specific commit by running **git checkout commit_id**. You should check the id using **git log** for example. Similarly, you can move back to a specific branch by running **git checkout branch_name**, most commonly **git checkout master**. The changes made in a specific commit can be viewed with **git show commit_id**.
-
-<div class="exercise">
 <h3>Exercise 12: A Secret {% include points.html text="10%" %}</h3>
 <ol>
 <li>Create a new file to you project called **secret.txt**, and write something inside such as "this is a very important secret".</li>
@@ -614,11 +610,13 @@ Of course, the same procedure can be repeated on the command line. You can brows
 <li>Push the changes to GitHub.</li>
 <li>Navigate to the project page on GitHub. You shouldn't see the secret on the front page. Find the secret from your commit history. Find the secret also using the command line.</li>
 </ol>
-</div>
 
-<div class="warning">
+
+
+
 Remember, don't push anything secret to the remote repository: no passwords, personal API keys, your student number, or anything you wouldn't want to share with the whole Internet.
-</div>
+
+
 
 ## GitHub's workflow
 
@@ -637,19 +635,17 @@ In order to push some new commits to a project one has cloned, the project's own
 However, there exists another way of suggesting changes to an existing project. This is called _forking_. When one forks a project, a copy of it is added to the users _own profile_. This will create an event to GitHub's "feed", and the project's owner can see who has forked their repository. After forking a project, you can clone the project from your _own profile_, and push changes to your _own version_, which has been separated from the original one. The difference to cloning is, that the cloned repository will not appear in your GitHub profile.
 
 If the chages you have done to your own version are good enough in your own opinion, you can suggest merging them to the original project with a [pull request](https://help.github.com/articles/about-pull-requests/). The owner of the original project can then go through your suggested changes and to integrate them to the project if they wish.
-
-<div class="exercise">
 <h3>Exercise 13: Cloning {% include points.html text="10%" %}</h3>
 <ol>
 <li>Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set</li>
 <li>Find an <a href="https://en.wikipedia.org/wiki/Open-source_software">open source</a> project of your choice from GitHub (you can for example check our student organization <a href="https://github.com/TKOaly">TKO-äly's GitHub</a> for some projects). First clone the project to your local machine. Then find out what the name of the remote repository is set to by default. You can do this with the command you found in the previous part of this exercise.</li>
 </ol>
-</div>
 
-<div class="exercise">
+
 <h3>Exercise 14: Exploring a project {% include points.html text="5%" %}</h3>
 Explore an open source project in GitHub. Find the issues and the pull requests, the people who have contributed to the project, and the statistics associated with them.
-</div>
+
+
 
 ## The End
 
