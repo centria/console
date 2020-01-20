@@ -79,7 +79,7 @@ Let's configure Git a bit.
 
 Link your name and email address to Git so that all the changes you make to different projects are properly associated with you. This can be done by running the following commands with your own personal details:
 
-```bash
+```console
 git config --global user.name "My Name"
 git config --global user.email email@address.com
 ```
