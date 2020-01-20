@@ -19,7 +19,7 @@ published: true
 <li>Understand what a commit is and knows how to create one.</li>
 <li>Understand the different states a change goes through before it's added to a commit.</li>
 <li>Understand what the master branch is.</li>
-<li>Know how to read the output of the command <code>git status</code></li>
+<li>Know how to read the output of the command **git status**</li>
 <li>Know how to create a repository on GitHub and add it to an existing Git project.</li>
 <li>Know how to use GitHub through an SSH connection.</li>
 <li>Know how to publish locally made commits.</li>
@@ -79,10 +79,11 @@ Let's configure Git a bit.
 
 Link your name and email address to Git so that all the changes you make to different projects are properly associated with you. This can be done by running the following commands with your own personal details:
 
-<pre>
+```bash
 git config --global user.name "My Name"
 git config --global user.email email@address.com
-</pre>
+```
+
 If you don't want your email to be public, GitHub offers a specific <a href="https://help.github.com/en/articles/setting-your-commit-email-address">noreply email</a>.
 
 <div class="note">
@@ -91,12 +92,11 @@ Make sure you noticed the "Note" part on the site linked above! The form of the 
 
 If you're not accustomed to using Vim, change the default editor of Git to nano with the following command:
 
-<pre>
-<code>
+```bash
 git config --global core.editor nano
-</code>
-</pre>
-In Windows replace <code>nano</code> with <code>notepad</code>.
+```
+
+In Windows replace **nano** with **notepad**.
 
 </div>
 
@@ -183,9 +183,9 @@ Changes can also be cancelled with Git. Adding some text to `lapio_w2.txt` could
 
 By running `git add -p` one can choose change by change, which ones to add to the next commit (y=add, n=don't add). The command only takes into consideration changes in files which are being tracked, i.e. _have already been added to Git once_. Thus new files cannot be added to Git with `git add -p`. Running `git add file` will add all the changes in the file. It is also possible to add entire folders to Git using the same command.
 
-<div class="warning">
+NOTICE!
 If you think there is a possibility that you will want to share a project with other people some day, don't add anything secret to Git. Even if you remove the secret content in the next commit, the delicate information stays in the project's history, and can be found from GitHub easily.
-</div>
+
 
 A good habit to form is to constantly check which changes will be added to the next commit with `git status`. This might save you a lot of trouble later on.
 
@@ -193,7 +193,7 @@ A good habit to form is to constantly check which changes will be added to the n
 
 After choosing which changes will be included in the next commit, you can finally create the commit with the command `git commit`. Every commit has a message attached to it, describing the changes included in the commit. The message is added upon creating the commit by running: `git commit -m "a descriptive message"`, where your descriptive message specifies what has changed since the last commit. If you leave out the flag `-m` and the message, a text editor will open, where you can write a longer, detailed description below the title message. The commit is then created by saving and exiting the text editor.
 
-[Here](https://github.com/erlang/otp/wiki/writing-good-commit-messages) are some quick instructions about writing a good commit message.
+[**Here**](https://github.com/erlang/otp/wiki/writing-good-commit-messages) are some quick instructions about writing a good commit message.
 
 We'll continue where the previous example left off. Let's add all the changes we made to the next commit, except the creation of the file `empty.txt`. Before running `git commit`, the output of `git status` is:
 
@@ -237,7 +237,7 @@ Date:
 The command `git log` outputs the author of the commit, the time of its creation and its title. Every commit has a unique id, formed with [SHA-1](https://en.wikipedia.org/wiki/SHA-1). In the output of `git log` the id can be seen as a long string next to the word "commit", which is `51bf544c786a671c28f70713b6cb33d87cc38` in this case.
 
 <div class="note">
-The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title <code>Changes to be commited</code>  is a piece of wrapping paper, which is spread out in front of you. With the command <code>git add</code> you can move the wooden blocks representing changes on top of the wrapping paper, and with <code>git commit</code> you tie the wrapper aroung the changes to create a commit.
+The process of creating a commit might seem unintuitive at first. The following analogy might help: Picture the commit as a package. You are sitting on the floor, with all the changes layed out in front of you as wooden blocks. The staging state, denoted with the title **Changes to be commited**  is a piece of wrapping paper, which is spread out in front of you. With the command **git add** you can move the wooden blocks representing changes on top of the wrapping paper, and with **git commit** you tie the wrapper aroung the changes to create a commit.
 </div>
 
 ### Branches
@@ -250,25 +250,25 @@ Branches are usually used for testing out new features without breaking a workin
 <h3>Exercise 3: Practising working with commits {% include points.html text="10%" %}</h3>
 <ol>
 <li>Create a folder on the command line and turn it into a Git project.</li>
-<li>Create a file called <code>story.txt</code> in your project. Add a lot of text inside.</li>
-<li>Add another file called <code>shopping_list.txt</code> to the project, and write down what you need from the store (or just many rows of text).</li>
-<li>Create a subfolder called <code>school</code> into the project, and create a file called<code>lapio.txt</code> inside. You will need these files in the future exercises.</li>
+<li>Create a file called **story.txt** in your project. Add a lot of text inside.</li>
+<li>Add another file called **shopping_list.txt** to the project, and write down what you need from the store (or just many rows of text).</li>
+<li>Create a subfolder called **school** into the project, and create a file called**lapio.txt** inside. You will need these files in the future exercises.</li>
 <li>After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.</li>
-<li>Using the command <code>git log</code>, check that you have properly created three commits.</li>
-<li>Add something new to the shopping list, and create another commit. Use the command <code>git add -p</code>.</li>
-<li>Make sure you can see all the commits in the output of <code>git log</code>.</li>
+<li>Using the command **git log**, check that you have properly created three commits.</li>
+<li>Add something new to the shopping list, and create another commit. Use the command **git add -p**.</li>
+<li>Make sure you can see all the commits in the output of **git log**.</li>
 </ol>
 
 <div class="note">
-If you see the following message when creating a commit <code>error: cannot run : No such file or directory error: unable to start editor</code>, make sure you configured the default text editor of Git properly (go back to exercise 2).
+If you see the following message when creating a commit **error: cannot run : No such file or directory error: unable to start editor**, make sure you configured the default text editor of Git properly (go back to exercise 2).
 </div>
 </div>
 
 <div class="exercise">
 <h3>Exercise 4: Removing changes {% include points.html text="10%" %}</h3>
 <ol>
-<li>Find out how you can remove changes from the state where they are being added to the next commit (under <code>Changes to be commited</code>), and move them under the headline <code>Changes not staged for commit</code>? Hint: <code>git status</code> will help.</li>
-<li>Add some new products to the shopping list, and add them to the next commit (so that they are under <code>Changes to be commited</code>). <strong>Don't create the commit yet.</strong></li>
+<li>Find out how you can remove changes from the state where they are being added to the next commit (under **Changes to be commited**), and move them under the headline **Changes not staged for commit**? Hint: **git status** will help.</li>
+<li>Add some new products to the shopping list, and add them to the next commit (so that they are under **Changes to be commited**). <strong>Don't create the commit yet.</strong></li>
 <li>Then remove the changes from the next commit.</li>
 <li>Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.</li>
 </ol>
@@ -291,7 +291,7 @@ You can create a repository to GitHub by pressing the button on the upper right 
 A window will open where you can add the repository a name and a description. A repository can be public or private: a public repository can be accessed by anyone, whereas a private repository can only be seen by people chosen by the owner.
 
 You can also create a _README_, a _license_ and a _.gitignore_ file when creating a repository. The point of a README file is to display useful information about the project. A good README contains, for example, a short description of the project, installing instructions and a link to the documentation. A license refers to a document stating the responsabilities and rights of the creator and the users of the project. The `.gitignore` file allows automatically ignoring some files when creating a commit, and it is often quite useful. You can read more about it
-[here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
+[**here**](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
 
 <div class="note">
 When you wish to update a pre-existing project to GitHub, it is not a good idea to let GitHub create files such as a README automatically. This will lead to problems, because GiHub contains files initially which are not found in the local project. You'll learn more about these kinds of situations later in this part.
@@ -320,7 +320,7 @@ If you haven't created an SSH key pair on your computer, do it first. The instru
 Add your public SSH key to your GitHub account. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">GitHub has instructions for it</a>.
 </p>
 <p class="note">
-If you don't want to install a new program (as suggested by the instructions), you can print the SSH key to your terminal with the command <code>cat</code>, copy it by hand, and continue following GitHub's instructions from step 2.
+If you don't want to install a new program (as suggested by the instructions), you can print the SSH key to your terminal with the command **cat**, copy it by hand, and continue following GitHub's instructions from step 2.
 </p>
 </div>
 
@@ -422,13 +422,13 @@ In situations like this one can put the local changes aside to the _stash_. This
 <div class="exercise">
 <h3>Exercise 9: Using stash when pulling from the remote {% include points.html text="10%" %}</h3>
 <ol>
-<li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline <code>untracked</code> in the output of <code>git status</code>).</li>
+<li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline **untracked** in the output of **git status**).</li>
 <li>Stash the changes you just made using Git.</li>
 <li>Open the files you last and check if you can still see the changes</li>
-<li>Edit the <i>first</i> sentence of the file <code>story.txt</code> in GitHub and create a commit.</li>
+<li>Edit the <i>first</i> sentence of the file **story.txt** in GitHub and create a commit.</li>
 <li>Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.</li>
-<li>Fetch the changes you made to <code>story.txt</code> in the remote repository to the local version. Use the stash.</li>
-<li>After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of <code>story.txt</code>.</li>
+<li>Fetch the changes you made to **story.txt** in the remote repository to the local version. Use the stash.</li>
+<li>After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of **story.txt**.</li>
 <li>Push the end result to GitHub.</li>
 <li>Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.</li>
 <div class="note">
@@ -460,7 +460,7 @@ nothing to commit, working directory clean
 Notice how Git is kind enough to notify us of the two parallel, differing states, and it even advices us on how to proceed.
 
 <div class="note">
-Remember that if <code>git status</code> doesn't display the newest state of the remote, you shoud run <code>git fetch</code> first.
+Remember that if **git status** doesn't display the newest state of the remote, you shoud run **git fetch** first.
 </div>
 
 Pushing the now commits will not work, as the command `git push` will output the following:
@@ -609,9 +609,9 @@ Of course, the same procedure can be repeated on the command line. You can brows
 <div class="exercise">
 <h3>Exercise 12: A Secret {% include points.html text="10%" %}</h3>
 <ol>
-<li>Create a new file to you project called <code>secret.txt</code>, and write something inside such as "this is a very important secret".</li>
+<li>Create a new file to you project called **secret.txt**, and write something inside such as "this is a very important secret".</li>
 <li>Create a new commit of the new file and the contents added to it.</li>
-<li>Then remove the file <code>secret.txt</code>, and create a new commit of the deletition.</li>
+<li>Then remove the file **secret.txt**, and create a new commit of the deletition.</li>
 <li>Push the changes to GitHub.</li>
 <li>Navigate to the project page on GitHub. You shouldn't see the secret on the front page. Find the secret from your commit history. Find the secret also using the command line.</li>
 </ol>
