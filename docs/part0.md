@@ -153,7 +153,7 @@ You can browse and manage files using the command line just as in the graphical 
 
 Open the graphical file browser. In ubuntu, open the application called "Files", or write the command **nautilus** and press <kbd>ENTER</kbd>. In Windows write **explorer.exe** instead. In MacOS, open finder and press the keys **Shift + Cmd + H**.
 
-You should now be in your _home folder_. The home folder holds all the personal files and folders of a user. If you are using one of the department's computers, the contents of your home folders are the same regardless of which physical computer you are using. This is because the contents are fetched from elsewhere. If you are using your personal computer, the home folder only includes the files on that physical computer.
+You should now be in your _home folder_. The home folder holds all the personal files and folders of a user. If you are using your personal computer, the home folder only includes the files on that physical computer.
 
 
 If using Windows Subsystem for Linux (or Ubuntu application), note that your Linux home is different than Windows home. If you need to access files or folders in your Windows home navigate to /mnt/c/Users/username (using cd /mnt/c/Users/username). Also note that most of the time directory ~ will refer to your Linux home
@@ -204,12 +204,12 @@ In the graphical user interface, you can create folders by right-clicking with y
 In the end, the command line works in a similar way to the graphical user interface: **cd** is the same as clicking a folder and **ls** shows the contents of a folder. In this part, you will learn how to things you already know how to do in a graphical environment using the command line.
 
 
-<h3>Exercise 1: Graphical vs. text-based user interface {% include points.html text="5%" %}</h3>
+<h3>Exercise 1: Graphical vs. text-based user interface </h3>
 
 You can mark this exercise as done after you've gone through the previous example of the differences between the graphical and text-based user interfaces. Make sure you replicated the examples yourself using the command line.
 
 
-<h3>Exercise 2: Creating a folder {% include points.html text="5%" %}</h3>
+<h3>Exercise 2: Creating a folder</h3>
 Create a folder named "lapio" in your home folder. Make sure you created the folder correctly by checking the output of **ls**.
 
 
@@ -252,12 +252,12 @@ Note that the file you created with notepad has been created as a Windows user. 
 
 
 
-<h3>Exercise 3: nano {% include points.html text="5%" %}</h3>
+<h3>Exercise 3: nano</h3>
 
 Find out how the text editor **nano** works by using Google or the **man** command. Make sure you know how to do at least the following things:
 
 <ul>
-<li> Sainvg a file without closing nano</li>
+<li> Saving a file without closing nano</li>
 <li> Copying and pasteing in nano</li>
 </ul>
 
@@ -266,7 +266,7 @@ Test out the procedures in practice! For example, open a file **example.txt**, a
 
 
 
-<h3>Exercise 4: vim {% include points.html text="5%" %}</h3>
+<h3>Exercise 4: vim </h3>
 
 Another command line text editor with a lot more features is <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>. However, it is notoriously unintuitive to use for beginners. Find out the following things about using vim:
 
@@ -310,7 +310,7 @@ cat2.jpg
 
 
 
-<h3>Exercise 5: File management 1 {% include points.html text="5%" %}</h3>
+<h3>Exercise 5: File management 1 </h3>
 
 In this exercise you'll practice file management from the command line. Start by creating a folder structure described in the figure below:
 
@@ -353,7 +353,7 @@ Examples of using **mv**:
 **mv ~/example.txt ~/Downloads/** moves the file **example.txt** from the home folder to the **Downloads** folder.
 
 
-<h3>Exercise 6: File management 2 {% include points.html text="5%" %}</h3>
+<h3>Exercise 6: File management 2 </h3>
 
 This exercise continues where the previous exercise left off.
 
@@ -369,7 +369,7 @@ Notice that the awkward typo in **cmnd-line.txt** has been fixed. The file **jav
 
 
 
-<h3>Exercise 7: Removing a folder {% include points.html text="5%" %}</h3>
+<h3>Exercise 7: Removing a folder </h3>
 
 Files can be removed with the command **rm** (<b>r</b>e<b>m</b>ove).
 
@@ -384,7 +384,17 @@ Note that when you remove something on the command line, it is not moved to the 
 
 <h2> Wild cards</h2>
 
-_Wild cards_ allow one to perform operations on several files at the same time. Their use is supported by almost all commands in the Unix environment, unlcuding **mv** and **cp**. Perhaps the most common wild card, the asterisk ***** corresponds to any amount of any given symbol. It can be used at any point of a string. For example the command **mv *.txt example/** moves all the files in the current directory ending with **.txt** to a folder caller **example**. Similarly **mv test* tests/** would move all the files starting with **test** to a  folder called **tests**.
+_Wild cards_ allow one to perform operations on several files at the same time. Their use is supported by almost all commands in the Unix environment, unlcuding **mv** and **cp**. Perhaps the most common wild card, the asterisk * corresponds to any amount of any given symbol. It can be used at any point of a string. For example the command 
+```console
+mv *.txt example/
+``` 
+
+moves all the files in the current directory ending with **.txt** to a folder caller **example**. Similarly 
+
+```console
+mv test* tests/
+``` 
+would move all the files starting with **test** to a  folder called **tests**.
 
 
 ```bash
@@ -396,7 +406,7 @@ target toinen.png
 ```
 
 
-<h3>Exercise 8: Wild cards {% include points.html text="10%" %}</h3>
+<h3>Exercise 8: Wild cards</h3>
 Create a folder called <i>pictures</i> on the command line, and download a **jpg** and a **png** formatted pictures. Then add some text files to the folder, for example **i_am_a_file.txt** or **i_am_not_a_picture.txt**. Finally create a folder called **pictures** and copy all the pictures in the subfolder using wild cards. You can read about other wild cards from <a href="http://www.linfo.org/wildcard.html">here</a> for example.
 
 
@@ -404,7 +414,7 @@ Create a folder called <i>pictures</i> on the command line, and download a **jpg
 
 Sometimes one might one to examine text files without opening a text editor. The easiest command for doing this is **cat**, which prints tout the contents of a text file:
 
-```
+```bash
 user@hal9000:~/esimerkki$ cat example.txt
 i am 
 inside
@@ -415,7 +425,7 @@ However, if the text file is large, we might not want to print out all the lines
 
 For example you can only print the first and the last rows with:
 
-```
+```bash
 user@hal9000:~/example$ tail -n 1 example.txt
 the example file
 user@hal9000:~/example$ head -n 1 example.txt
@@ -426,7 +436,8 @@ In the above example we gave 1 as an argument for the flag **-n**.
 
 It is also possible to search for specific lines in a file. This can be done with the commans **grep** (search <b>g</b>lobally for a <b>r</b>egular <b>e</b>xpression and <b>p</b>rint). The command **grep** allows you to filter out specific lines from a file based on some criteria. By default **grep** returns all the **lines** which contain the exact string given as an argument. Here is an example demonstrating the basic functionality of grep:
 
-```
+
+```bash
 user@hal9000:~/example$ cat diary.txt
 October 6th
 
@@ -449,7 +460,7 @@ Note that the filtering also included occurences inside another string. In most 
 ![grep-example](../assets/secret.png){:class="img-responsive"}
 
 
-<h3>Exercise 9: grep {% include points.html text="10%" %}</h3>
+<h3>Exercise 9: grep</h3>
 By default **grep** is case sensitive, which means that it treats "a" and "A" differently when searching for matches.
 
 <ul>
@@ -457,6 +468,7 @@ By default **grep** is case sensitive, which means that it treats "a" and "A" di
 
 <li>Find out (using Google for example) how you can only match occurences which are at the beginning of a line. Make sure you understood how to do this, by practicing using the command on the command line. You can for example write the following to a file:</li>
 </ul>
+
 <pre>
 Unix
 Linux
@@ -480,7 +492,7 @@ The true power of tools like **grep** comes out when it is paired with other com
 
 An example of using a pipe is to pass the output of **ls** to **grep** in order to filter out specific filenames:
 
-```
+```console
 user@hal9000:~/example$ ls
 example.txt note2.txt note.txt
 user@hal9000:~/example$ ls | grep note
@@ -494,7 +506,7 @@ However, sometimes writing outputs to files can be useful. The size of a termina
 
 Similarly, the operator **<** allows giving the contents of files as an argument to a command. This is again useful, if the input in question is too large to paste or the task has to be automated.
 
-```
+```bash
 user@hal9000:~/example$ ls 
 Applications	Library		      Pictures	      kissakuvia
 Desktop		    Linus_Torvalds	Public          script.sh
@@ -514,10 +526,10 @@ The operator **>** overwrites the contents of the file with the given text and *
 
 
 
-<h3>Exercise 10: A Student's Notes {% include points.html text="5%" %}</h3>
+<h3>Exercise 10: A Student's Notes </h3>
 Create a text file called **notes.txt** on the command line. Paste inside the following text which describes the week of a typical student:
 
-```
+```console
 monday intro to java: Java is a programming language
 monday unicafe: Fish shoup
 tuesday intro to java: A class can implement an interface
@@ -534,135 +546,6 @@ friday unicafe: Pizza
 Then separate the menu of this week to its own file **unicafe.txt**. You don't have to remove the menu from the **notes** file. Also separate the notes concerning the course Introduction to Java.
 
 
-<h2> SSH connection</h2>
-
-Up until now we have used the command line to run programs in the local file system. However, it is also possible to connect to another system using the command line. SSH is an encrypted connection protocol, which allows logging in to another computer using the command line. An encrypted connection means that infromation is not shared in a human readable plain text form. The goal is to make sure that only the intended recipients can decrypt messages and read their contents.
-
-In a Unix environment an SSH connection can be established with the command **ssh**. Its basic functionality is the following: **ssh user@server.address** connects to a server at **server.address** and tries to login as **user**. The user is asked their password, and if authentication is successful, a connection is opened. The working directory is changed to the remote server on the command line, and one can run commands as in the local environment, except the commands are run in the remote system where one just connected.
-
-The department of computer science has four different servers for remote connection. Authentication is done using the university's account.
-
-1.  melkki.cs.helsinki.fi
-2.  melkinpaasi.cs.helsinki.fi
-3.  shell.cs.helsinki.fi
-4.  melkinkari.cs.helsinki.fi
-
-All these servers direct the user to the same, personal home directory, which you can acces using all the computers at the department.
-
-Let's use the **ssh** command to create a connection to the department's servers:
-
-```
-user@hal9000:~$ ssh user@melkki.cs.helsinki.fi
-user@melkki.cs.helsinki.fi's password:
-```
-
-Note that it's normal for text not to appear when you are inserting your password.
-
-When connecting to a system for the first time, an error message will be displayed, stating that the server is not yet trusted. If you write **yes** to indicate that the server is trusted, its fingerprint will be remembered. Even though SSH is encrypted, it is not totally attack proof (as nothing in the internet generally is). If you receive this message when using a public internet for example, it could be safer not to establish a connection, since you could be the victim of an attack.
-
-When the connection has been established, the command line will look slightly different:
-
-```
-user@melkki:~$
-```
-
-The current folder in the command line has changed to the home directory of your department's user, and you can access all its files. You can end the connection by running **exit**.
-
-You can read more about SSH from [here](https://www.ssh.com/ssh/) for example.
-
-<h2> SSH key pairs</h2>
-
-When using the ssh command in the previous section, you authenticated yourself with the department's user credentials. There is also another way: an SSH key pair consisting of a public and a private key. In practice, the keys are two long strings, which seem random. They are used to make sure that only authorized people can access certain information. This is an encryption technique we will not cover more in detail on this course, but which you can read more about by searching for example _public key encryption_ or _asymmetric cryptography_. **It suffices to understand that the private key should only be known by its owner, whereas the public key can safely be shared with others**.
-
-You can create an SSH key pair with the command **ssh-keygen**. The command asks for a password and a location for the key. We recommend not changing the default location of a key pair without a specific reason. The default location is the **.ssh** folder in the current user's home directory.
-
-
-Always use a password when creating an SSH key pair. If you use an SSH key with the department's servers, you have to set a password according to the department's rules.
-
-```
-user@hal9000$ ssh-keygen
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/user/.ssh/id_rsa): /home/user/.ssh/id_rsa_test
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/user/.ssh/id_rsa.
-Your public key has been saved in /home/user/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:asdasdadsfasdasdasdasdasdasd
-The key's randomart image is:
-+---[RSA 2048]----+
-|    .      ..oo..|
-|   . . .  . .o.X.|
-|    . . o.  ..+ B|
-|   .   o.o  .+ ..|
-|    ..o.S   o..  |
-|   . %o=      .  |
-|    @.B...     . |
-|   o.=. o. . .  .|
-|    .oo  E. . .. |
-+----[SHA256]-----+
-```
-
-The command creates two files in the **.ssh** folder. The file with the **.pub** extension contains the public key, which you can safely share with others. The other file without an extension contains the private key, which you should treat with equal care as you would a password.
-
-Authentication with an SSH key pair is possible, when the public key is added to the server where one wishes to be authenticated. Then one can log in to the system, if one knows the private key corresponding to the public key. The public key is added to the path **~/.ssh/authorized_keys**, that is to the folder **.ssh** in the user's home folder, to the file [authorized_keys](https://www.ssh.com/ssh/authorized_keys/). If you are using multiple keys, each one should be added to a new line in the file. You'll probably have to create the folder and the file yourself on the university's server.
-
-Here is a picture of the correct locations of the keys when logging in to the department's servers with an SSH key pair:
-
-![About using an SSH key pair](../assets/ssh-explanation.png){:class="img-responsive"}
-
-The public key can be moved to the remote server with the command **scp** for example, which allows copying files between two distinct systems (**cp** was for copying inside the local system). The command is used in the following way:
-
-```
-scp path/to/copyable/file user@palvelmen.osoite:path/to/target/folder
-```
-
-Notice the colon between the remote server's address and the target path!
-
-
-
-You can for example copy the public key to the **.ssh** file on the remote server (you'll probably have to create it yourself) and then rename the key file appropriately.
-
-
-<br/>
-<i>
-It's also a good idea to see how **scp** works if the target file doesn't exist.
-</i>
-
-
-Copying the public key file can also be delegated to the command [ssh-copy-id](https://www.ssh.com/ssh/copy-id).
-
-The authentication works correctly, when creating an SSH connection you can login using the password set for the SSH key pair.
-
-In order not to rewrite the passoword each time you want to log in, you might want to add the password to the ssh agent. Having done that, the password has to only be written once you've logged out of the system. This can be done using two commands.
-
-```
-# make sure the agent is ready
-eval $(ssh-agent -s)
-# assuming you are using the default path
-# otherwise provide the path to the private key
-ssh-add
-```
-
-
-<h3>Exercise 11: SSH connection {% include points.html text="10%" %}</h3>
-
-Create an SSH key pair on your computer. Then enable logging in to the department's servers with the key when establishing an SSH connection. Finally test out the key pair. 
-
-If possible, do this using other than the department's computers. If you don't have access to the department's servers, i.e. you do not have a university account, you can mark the exercise done after generating the SSH key pair.
-
-
-If you do the exercise using a department's computer, the connection is likely to act weirdly, because the connection is actually established to the same system. The password of the SSH key  might not be asked even if you had set it correctly.
-
-
-
-If you defined the location of the key pair yourself, and the connection still asks for your university password, specify the path to the private key:
-
-```console
-ssh -i path/to/private/key user@remote.server.address
-```
-
-
 
 
 <h2> Wget</h2>
@@ -672,7 +555,7 @@ You are probably using a browser like Firefox or Google Chrome to read this mate
 The command required to download something from the internet is **wget** (_world wide web get_). The simplest way to download a site at **site.address** is with **wget site.address**. Websites are written in a language called HTML, which you will learn more about in the third part of this course. Thus the file you will download has the extension **.html**.
 
 
-<h3>Exercise 12: Wget and HTML code {% include points.html text="5%" %}</h3>
+<h3>11: Wget and HTML code {% include points.html text="5%" %}</h3>
 
 <ol>
 <li>Download a site of your liking to your computer using **wget**.</li>
@@ -686,7 +569,7 @@ You'll learn how to write HTML documents in the third part of the course.
 
 
 
-<h3>Exercise 13: Wget, grep and Linus Torvalds {% include points.html text="10%" %}</h3>
+<h3>Exercise 11: Wget, grep and Linus Torvalds </h3>
 
 <p>
 The goal of this exercise is to count how many lines of the Wikipedia article about Linus Torvalds contains the word "Linux".
@@ -703,7 +586,7 @@ If you wish, you can do the same exercise without writing anyting to a separate 
 
 <h2> Permissions</h2>
 
-In Unix-like systems, the ability to read, edit and execute files and folders is controlled with permissions. This is especially useful in systems used by several users, such as the one at our department.
+In Unix-like systems, the ability to read, edit and execute files and folders is controlled with permissions. This is especially useful in systems used by several users.
 
 The _Read_ permission allows the user to read the contents of a file. A user with the permission to _write_ can edit a file. The permission to _execute_ means that if the file is a program for example, the user can run it. Execute permissions are also required in order to move inside a folder with **cd**. If a user doesn't have the necessary persmission, usually the error **Permission denied** is printed out.
 
@@ -724,7 +607,7 @@ Each file and folder in the directory has its own line. The first column in the 
 
 The first letter is either **-** or **d**, which tells if the resource is a file **-** or a directory **d**. There are also other types of files, but these are the most common. The following nine symbols are reserved for the permissions themselves. The permissions are always marked in the same order: read (r), write (w) and execute (x). The first three symbols describe the permissions of the owner. If there is a dash **-** at the place of a specific permission, the permission is missing, i.e. it has not been given.
 
-The next three symbols reveal the permissions of the group of the file. A group is a way of bundling users together. For example all the students of the department of computer science could be in the same group. A file is assigned to a group, and the group can have certain permissions. These permissions apply to all members of the group.
+The next three symbols reveal the permissions of the group of the file. A group is a way of bundling users together. For example all the students of the school could be in the same group. A file is assigned to a group, and the group can have certain permissions. These permissions apply to all members of the group.
 
 The last three symbols describe the permissions of other users: Those who are not the owner, or belong to the group of the file.
 
@@ -778,7 +661,7 @@ drw-r--r-- 1 user user 130 Jun 14 17:54 diary
 ```
 
 
-<h3>Exercise 14: Practising permissions {% include points.html text="10%" %}</h3>
+<h3>Exercise 12: Practising permissions</h3>
 
 Create a file called **permission.txt** and practise giving and removing permissions. Define the file's permissions to be each of the following:
 
@@ -790,11 +673,6 @@ Create a file called **permission.txt** and practise giving and removing permiss
 -r-xrw--w-
 **
 </pre>
-
-
-If you're doing the exercise on one of the department's computers, do it in the following path: **/cs/home/your_uni_username**. If the folder is not found, (you get **No such file or directory** when trying to **cd** into it), please activate your CS account following<a href="https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat"> these </a> instructions.
-
-
 
 You can read more about permissions for example [here](https://csguide.cs.princeton.edu/account/groups).
 
@@ -831,7 +709,7 @@ Note however, that some things act differently when used in scripts. For example
 Remember that in order to run a file, it has to be given execute permissions with the command **chmod.**
 
 
-<h3>Exercise 15: A small bash script {% include points.html text="5%" %}</h3>
+<h3>Exercise 13: A small bash script</h3>
 
 <ol>
 <li>Find out how you can print text to the standard output in Bash. </li>
@@ -848,7 +726,7 @@ It recommended to separate superusers from regular users in a computer system. T
 
 However, a regular user can run commands with the privileges of a superuser, if they belong to the _sudoers_ group. This can be done by adding **sudo** in front of the command. The user will be prompted with their own password. Using **sudo** is often required for installing programs with a package manager for example. Nonetheless, unnecessary use of **sudo** should be avoided. You will need it sometimes, but you shouldn't append it before each command to avoid permission errors. 
 
-**You shouldn't try to run **sudo** commands on the department's computers**, such as the ones found in the computer labs or when connected via SSH. This will be logged as malicious behaviour.
+**You shouldn't try to run **sudo** commands on the school's computers**!
 
  Don't for example copy a command from the internet which starts with the word "sudo" if you don't know what it does. Otherwise you are giving full privileges to an unknown program in your system.
 
@@ -856,7 +734,7 @@ However, a regular user can run commands with the privileges of a superuser, if 
 
 The world is filled with different programs designed for the command line. The easiest way to install command line tools is with a package manager. Probably the most common ones are Apt (Linux) and Homebrew (MacOS).
 
-Ubuntu and Cubbli (the version of Linux used in the department's systems) should have Apt (or a very similiar program called apt-get) installed by default. In MacOS you'll have to install Homebrew [yourself](https://brew.sh/). You can find instructions on how to use apt from [here](https://help.ubuntu.com/lts/serverguide/apt.html.en) for example. **Using a package manager is highly recommended.**
+Ubuntu (The most "consumer friendly" distribution of Linux) should have Apt (or a very similiar program called apt-get) installed by default. In MacOS you'll have to install Homebrew [yourself](https://brew.sh/). You can find instructions on how to use apt from [here](https://help.ubuntu.com/lts/serverguide/apt.html.en) for example. **Using a package manager is highly recommended.**
 
 The simplest way of using a package manager is by using the command **install**, and giving it the name of the desired program as an argument.
 

@@ -54,24 +54,24 @@ There are several different version control tools available, but this part will 
 
 ## About Git
 
-Git was initiated by Linus Torvalds, who studied at the department of Computer Science at the University of Helsinki in the nineties. Torvalds is most likely more famous for being the primary developer of the Linux kernel, which is the "heart" of many operating systems, such as Google's [Android](<https://en.wikipedia.org/wiki/Android_(operating_system)>). Almost all the department's computers have a Linux operating system installed in them. 
+Git was initiated by Linus Torvalds, the original creator of Linux. Torvalds is most likely more famous for being the primary developer of the Linux kernel, which is the "heart" of many operating systems, such as Google's [Android](<https://en.wikipedia.org/wiki/Android_(operating_system)>).
 
 Torvalds started developing Git for his own needs when coding the Linux kernel. He needed a tool for storing different versions of his own code and sharing it with other people.
 
-GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similiar to GitHub, such as [GitLab](https://about.gitlab.com/), however, this part deals with using GitHub as it is more popular in our department.
+GitHub is a service which was created later on, used for storing and publishing projects. There are several sites similiar to GitHub, such as [GitLab](https://about.gitlab.com/), however, this part deals with using GitHub as it is more popular and mature.
 
 Git and GitHub are used in solo as well as collaborative projects at University and in the industry. It's usage isn't limited only to code, and many people like to for example backup their thesis using Git. Nevertheless, this part focuses on sharing code with GitHub, and some of the common problems faced in the process. Git will certainly be useful in your studies, and you will learn more about it in the software engineering courses.
 
-<h3>Exercise 1: Creating a GitHub account {% include points.html text="5%" %}</h3>
+<h3>Exercise 1: Creating a GitHub account</h3>
 
 Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
 
 <br><br>
-Git should be already installed on the department's computers and Ubuntu. If this is not the case, you can install it according to these  <a href="https://git-scm.com/downloads" >instructions</a>, or using a <a href="/command-line#installing">package manager</a>.  We'll learn how to use the command line client of Git.
+Git should be already installed on the schools's computers.  We'll learn how to use the command line client of Git.
 
 
 
-<h3>Exercise 2: Configuring Git {% include points.html text="5%" %}</h3>
+<h3>Exercise 2: Configuring Git </h3>
 
 Let's configure Git a bit.
 
@@ -248,7 +248,7 @@ The process of creating a commit might seem unintuitive at first. The following 
 At the top of of the output of **git status**, you can see the following text: **On branch master**. Branches allow separating some commits from others. This means that a new branch can be developed independently from an old branch. It is customary for projects to have a main branch, usually called the **master** branch, containing the version currently in use.
 
 Branches are usually used for testing out new features without breaking a working version of the program. Since branches don't affect each other states, the new branch can be played with without worrying about other ones. When the changes made to the new branch are deemed ready, the branch can be merged to the master branch, and thus the new features will be published. Although branches are an important part of Git, this course will not focus on using them. It suffices to understand that we will only use the master branch in the exercises and in the exam.
-<h3>Exercise 3: Practising working with commits {% include points.html text="10%" %}</h3>
+<h3>Exercise 3: Practising working with commits </h3>
 <ol>
 <li>Create a folder on the command line and turn it into a Git project.</li>
 <li>Create a file called **story.txt** in your project. Add a lot of text inside.</li>
@@ -266,7 +266,7 @@ If you see the following message when creating a commit **error: cannot run : No
 
 
 
-<h3>Exercise 4: Removing changes {% include points.html text="10%" %}</h3>
+<h3>Exercise 4: Removing changes </h3>
 <ol>
 <li>Find out how you can remove changes from the state where they are being added to the next commit (under **Changes to be commited**), and move them under the headline **Changes not staged for commit**? Hint: **git status** will help.</li>
 <li>Add some new products to the shopping list, and add them to the next commit (so that they are under **Changes to be commited**). <strong>Don't create the commit yet.</strong></li>
@@ -311,9 +311,11 @@ We'll choose the SSH address for the remote project:
 ![SSH address in GitHub](../assets/ssh-clone.png)
 
 A new repository called "origin" is added using an SSH connection by running the command **git remote add origin git@github.com:user/project.git**. An HTTPS address would be almost identical to the URL in your browser. A remote can be called practically anything besides "origin", but it is a good and a common choice. It is possible to add several remotes, when properly naming them becomes important.
-<h3>Exercise 5: SSH key to GitHub {% include points.html text="5%" %}</h3>
+
+
+<h3>Exercise 5: SSH key to GitHub </h3>
 <p>
-If you haven't created an SSH key pair on your computer, do it first. The instructions can be found from <a href="/command-line">the first part</a>.
+If you haven't created an SSH key pair on your computer, do it first. The instructions can be found from <a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">GitHub documentation</a>.
 </p>
 <p>
 Add your public SSH key to your GitHub account. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">GitHub has instructions for it</a>.
@@ -323,7 +325,7 @@ If you don't want to install a new program (as suggested by the instructions), y
 </p>
 
 
-<h3>Exercise 6: Creating a remote in GitHub {% include points.html text="5%" %}</h3>
+<h3>Exercise 6: Creating a remote in GitHub</h3>
 <p>Create a remote repository for the project you created locally. </p>
 
 <p><b>Don't let GitHub create a README, license or a .gitignore file when creating the repository. Doing so will cause problems later.</b></p>
@@ -341,7 +343,9 @@ After a project has been added to a repository in GitHub, commits can be publish
 Changes can be pushed to a specific branch in the remote repository as follows: **git push remotename branchname**. In this part we will only use the master branch. If you add the flag **-u** after the command **push**, next time you do not need to specify the name of the remote and the branch to push changes to the same place. Using the flag **-u** is recommended.
 
 Let's push the changes we made to the file **lapio_w2.txt** by running **git push -u origin master**, since we named the remote **origin** and we are using the master branch. Next we'll navigate to the project site on GitHub. There we will find the file **lapio_w2.txt**.
-<h3>Exercise 7: Publishing a commit {% include points.html text="5%" %}</h3>
+
+
+<h3>Exercise 7: Publishing a commit</h3>
 <ol>
 <li>Push the three commits you made earlier to the master branch of the remote repository.</li>
 <li>Check on GitHub that you can find all the changes in the remote.</li>
@@ -387,7 +391,9 @@ Fast-forward
 ```
 
 Now you can find the new line of text in the file you changed via GitHub.
-<h3>Exercise 8: Fetching code from GitHub {% include points.html text="5%" %}</h3>
+
+
+<h3>Exercise 8: Fetching code from GitHub</h3>
 Create a new file to the school subfolder via GitHub, and fetch it to your local version.
 
 
@@ -415,7 +421,9 @@ Aborting
 Pulling the new commit from the remote does not work, because the local verison holds changes to the same file as the remote repository, and the local changes have not been wrapped into a commit.
 
 In situations like this one can put the local changes aside to the _stash_. This is done with the command **git stash**. When the command is run, the local changes in files tracked by Git will by hidden, but not lost completely. In order to also stash changes in untracked files, add the flag **-u**. Changes can be returned from the stash by running **git stash pop**.
-<h3>Exercise 9: Using stash when pulling from the remote {% include points.html text="10%" %}</h3>
+
+
+<h3>Exercise 9: Using stash when pulling from the remote</h3>
 <ol>
 <li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline **untracked** in the output of **git status**).</li>
 <li>Stash the changes you just made using Git.</li>
@@ -485,7 +493,8 @@ Merge made by the 'recursive' strategy.
 ```
 
 Now according to the output of **git status** we have  created two commits, (**ahead by 2 commits**). The first one is the commit we created locally, which added one new file to the project, and the other one is the merge conflict. Pushing the two commits to GitHub should not result in any errors.
-<h3>Exercise 10: Merging {% include points.html text="5%" %}</h3>
+
+<h3>Exercise 10: Merging </h3>
 <ol>
 <li>Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.</li>
 <li>Try pushing the local commit to the remote repository and observer the error message.</li>
@@ -568,7 +577,7 @@ Finally, we'll wrap up resolving the conflicts by, you guessed it, creating a ne
 Merge conflicts are enfuriating, but rather common when collaborating with others. The easiest way to avoid them is by making sure to always start developing on the newest version from the remote, i.e. by pulling before starting development. However, sometimes they cannot be avoided, in which case one must patiently go through the conflicting files.
 
 Merge conflicts can also occur when taking changes out of the stash, if the hidden changes overlap with new ones.
-<h3>Exercise 11: A Merge Conflict {% include points.html text="10%" %}</h3>
+<h3>Exercise 11: A Merge Conflict</h3>
 
 Create a merge conflict in your project and resolve it. Make sure to push the end result to GitHub.
 
@@ -602,7 +611,9 @@ Then by pressing "Browse files", or the rightmost button with **<>** written on 
 ![Change back to master](../assets/back-to-master.png)
 
 Of course, the same procedure can be repeated on the command line. You can browse the state of the project after a specific commit by running **git checkout commit_id**. You should check the id using **git log** for example. Similarly, you can move back to a specific branch by running **git checkout branch_name**, most commonly **git checkout master**. The changes made in a specific commit can be viewed with **git show commit_id**.
-<h3>Exercise 12: A Secret {% include points.html text="10%" %}</h3>
+
+
+<h3>Exercise 12: A Secret</h3>
 <ol>
 <li>Create a new file to you project called **secret.txt**, and write something inside such as "this is a very important secret".</li>
 <li>Create a new commit of the new file and the contents added to it.</li>
@@ -635,14 +646,17 @@ In order to push some new commits to a project one has cloned, the project's own
 However, there exists another way of suggesting changes to an existing project. This is called _forking_. When one forks a project, a copy of it is added to the users _own profile_. This will create an event to GitHub's "feed", and the project's owner can see who has forked their repository. After forking a project, you can clone the project from your _own profile_, and push changes to your _own version_, which has been separated from the original one. The difference to cloning is, that the cloned repository will not appear in your GitHub profile.
 
 If the chages you have done to your own version are good enough in your own opinion, you can suggest merging them to the original project with a [pull request](https://help.github.com/articles/about-pull-requests/). The owner of the original project can then go through your suggested changes and to integrate them to the project if they wish.
-<h3>Exercise 13: Cloning {% include points.html text="10%" %}</h3>
+
+
+<h3>Exercise 13: Cloning</h3>
 <ol>
 <li>Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set</li>
 <li>Find an <a href="https://en.wikipedia.org/wiki/Open-source_software">open source</a> project of your choice from GitHub (you can for example check our student organization <a href="https://github.com/TKOaly">TKO-äly's GitHub</a> for some projects). First clone the project to your local machine. Then find out what the name of the remote repository is set to by default. You can do this with the command you found in the previous part of this exercise.</li>
 </ol>
 
 
-<h3>Exercise 14: Exploring a project {% include points.html text="5%" %}</h3>
+<h3>Exercise 14: Exploring a project</h3>
+
 Explore an open source project in GitHub. Find the issues and the pull requests, the people who have contributed to the project, and the statistics associated with them.
 
 
@@ -665,6 +679,3 @@ Hungry for more? You can read about Git from the following sources:
 - <a href="https://try.github.io/">https://try.github.io/</a>
   - A tutorial by GitHub, starting from the basics. Handles some things which are not covered here, like **git diff**.
 - If you've already gotten to know Git, you might be interested in learning more about its history. Storing commit history, demonstrated in the exercise "A Secret", also enables overwriting history. Although this can be useful for covering up mistakes, rewriting history can be dangerous in collaborative projects, since it can make other people's versions invalid. There is a tutorial on the subject by [Atlassan](https://www.atlassian.com/git/tutorials/rewriting-history). They also have other [advanced tutorials](https://www.atlassian.com/git/tutorials/advanced-overview).
-
-P.S If you are a student at the University of Helsinki, check out GitHub's student pack [offers](https://education.github.com/pack/offers). You can get credits for several paid services, like AWS and Digital Ocean.
-
