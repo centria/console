@@ -2,7 +2,7 @@
 title: "Part 3"
 permalink: /part3/
 nav_order: 4
-published: true
+published: false
 ---
 
 ## Part 3
