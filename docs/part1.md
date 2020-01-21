@@ -195,7 +195,7 @@ A good habit to form is to constantly check which changes will be added to the n
 
 ### Creating a commit
 
-After choosing which changes will be included in the next commit, you can finally create the commit with the command **git commit**. Every commit has a message attached to it, describing the changes included in the commit. The message is added upon creating the commit by running: **git commit -m "a descriptive message"**, where your descriptive message specifies what has changed since the last commit. If you leave out the flag **-m** and the message, a text editor will open, where you can write a longer, detailed description below the title message. The commit is then created by saving and exiting the text editor.
+After choosing which changes will be included in the next commit, you can finally create the commit with the command **git commit**. Every commit has a message attached to it, describing the changes included in the commit. The message is added upon creating the commit by running: **git commit -m "a descriptive message"**, where your descriptive message specifies what has changed since the last commit. If you leave out the flag **-m** and the message, a text editor will open, where you can write a longer, detailed description below the title message. The commit is then created by saving and exiting the text editor. 
 
 [**Here**](https://github.com/erlang/otp/wiki/writing-good-commit-messages) are some quick instructions about writing a good commit message.
 
@@ -218,7 +218,7 @@ Then we'll run **git commit -m "Add new tools file"**
 
 Now the output of **git status** is:
 
-```
+```console
 On branch master
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -230,7 +230,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 The changes which were commited are no longer visible in the output. However, they are not lost, they have just been moved to the commit. You can view the commits of a project with the command **git log**:
 
-```
+```console
 commit 51bf544c786a671c28f70713b6cb33d87cc38
 Author:
 Date:
@@ -457,7 +457,7 @@ Actually, merging is built into the command **git pull**. In other words, it suf
 
 Let's test merging in practice. We'll start by creating two non-conflicting commits by creating two new files, one in the remote repository and the other in the local version. After creating the two commits, running **git status** will output:
 
-```
+```console
 On branch master
 Your branch and 'origin/master' have diverged,
 and have 1 and 1 different commit each, respectively.
@@ -474,7 +474,7 @@ Remember that if **git status** doesn't display the newest state of the remote, 
 
 Pushing the now commits will not work, as the command **git push** will output the following:
 
-```
+```console
 To git@github.com:user/repo.git
  ! [rejected]        master -> master (non-fast-forward)
 error: failed to push some refs to 'git@github.com:user/repo.git'
@@ -486,7 +486,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 However, Git gives instructions on what to do next. We'll fetch the new state of the remote and combine it with the local version by running **git pull**. When a text editor opens, we'll give the merge commit a message, save it, and exit. The following will be printed out to the terminal:
 
-```
+```console
 From github.com:user/repo
  * branch            master     -> FETCH_HEAD
 Merge made by the 'recursive' strategy.
@@ -541,13 +541,13 @@ Notably, we'll remove the lines starting with <, > and =. In addition, we could 
 
 In this case, we'll combine the greetings into a more concise one:
 
-```
+```console
 Greetings from my computer and from GitHub
 ```
 
 Now running **git status** will output a message reminding us that we are currently resolving a merge conflict:
 
-```
+```console
 On branch master
 Your branch and 'origin/master' have diverged,
 and have 1 and 1 different commit each, respectively.
@@ -565,7 +565,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Let's add the resolved file to Git with **git add** (note that the flag -p would not work in this particular case). Running **git status** will then yield:
 
-```
+```console
 On branch master
 All conflicts fixed but you are still merging.
   (use "git commit" to conclude merge)
