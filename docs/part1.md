@@ -66,6 +66,8 @@ Git and GitHub are used in solo as well as collaborative projects at University 
 
 Start by creating a GitHub account at <a href="https://github.com/"> https://github.com/ </a>. Programmers often use GitHub as a sort of code protfolio, so make sure to choose a username which you don't mind adding to your CV.
 
+If you already have a GitHub account, consider this exercise done, and use the one you have.
+
 <br><br>
 Git should be already installed on the schools's computers.  We'll learn how to use the command line client of Git.
 
