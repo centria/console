@@ -11,7 +11,7 @@ This is the beginning of the course material. The primary goal of the first part
 
 If you do not have access to Unix, Linux or Mac, you can do the exercises in Windows 10 with **Linux Subsystem**, **Virtual Linux**, or even **Git Bash**.
 
-There might be some exercises that cannot be done in certain environments. For example, **Git Bash** does not have the commands **man** or **zip** installed by default. If the terminal tells you **command not found**, first check you did not do a typo. If the command truly is not found, it is not installed, and you can skip the exercise. **READ THE INSTRUCTIONS AND THE MATERIAL, EVEN IF THE COMMAND IS NOT FOUND!**
+There might be some exercises that cannot be done in certain environments. For example, **Git Bash** does not have the commands **man**, **wget** or **zip** installed by default. If the terminal tells you **command not found**, first check you did not do a typo. If the command truly is not found, it is not installed, and you can skip the exercise. **READ THE INSTRUCTIONS AND THE MATERIAL, EVEN IF THE COMMAND IS NOT FOUND!**
 
 <h2>The learning goals for this part</h2>
 
