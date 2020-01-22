@@ -11,6 +11,8 @@ This is the beginning of the course material. The primary goal of the first part
 
 If you do not have access to Unix, Linux or Mac, you can do the exercises in Windows 10 with **Linux Subsystem**, **Virtual Linux**, or even **Git Bash**.
 
+There might be some exercises that cannot be done in certain environments. For example, **Git Bash** does not have the commands **man** or **zip** installed by default. If the terminal tells you **command not found**, first check you did not do a typo. If the command truly is not found, it is not installed, and you can skip the exercise. **READ THE INSTRUCTIONS AND THE MATERIAL, EVEN IF THE COMMAND IS NOT FOUND!**
+
 <h2>The learning goals for this part</h2>
 
 The goal is that after this part the student
@@ -207,7 +209,7 @@ In the end, the command line works in a similar way to the graphical user interf
 
 <h3>Exercise 1: Graphical vs. text-based user interface </h3>
 
-You can mark this exercise as done after you've gone through the previous example of the differences between the graphical and text-based user interfaces. Make sure you replicated the examples yourself using the command line.
+Go through the previous example of the differences between the graphical and text-based user interfaces. Make sure you replicated the examples yourself using the command line.
 
 
 <h3>Exercise 2: Creating a folder</h3>
