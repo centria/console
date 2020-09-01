@@ -327,8 +327,7 @@ In the folder structure the directory **school** contains three folders: **tools
 First create the **school** folder and move inside it. Then create the folder structure described above. Create some of the files and folders directly from the **school** folder, by using longer paths, and some by moving into the subfolder before creating a new file.
 
 
-<p class="note">
-You can create a text file by opening it in a text editor and saving, or with the command **touch**.</p>
+You can create a text file by opening it in a text editor and saving, or with the command **touch**.
 
 Make sure you've created all the proper files and folders with **ls**.
 
@@ -492,7 +491,7 @@ and then make sure you can filter out the appropriate words with grep.
 When looking for information on the internet about any commands, always make sure you test out their functionality on the command line. This makes it easier to notice if you've misunderstood something.
 
 
-The true power of tools like **grep** comes out when it is paired with other commands. The output of another command can be passed on to another command with the operator **|**, usually called _the pipe_. With the pipe you can do more complicated operations which require several programs with just one line.
+The true power of tools like **grep** comes out when it is paired with other commands. The output of another command can be passed on to another command with the operator **\|**, usually called _the pipe_. With the pipe you can do more complicated operations which require several programs with just one line.
 
 An example of using a pipe is to pass the output of **ls** to **grep** in order to filter out specific filenames:
 
@@ -579,11 +578,10 @@ You'll learn how to write HTML documents in the third part of the course.
 The goal of this exercise is to count how many lines of the Wikipedia article about Linus Torvalds contains the word "Linux".
 </p>
 
-<ol>
-<li>Download the <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia article</a> about Linus Torvalds to your computer using **wget**.</li>
-<li>Using "grep", filter out the lines containing the word "Linux". Write the lines to a new file.</li>
-<li>Search online how you can count the lines of a file using the command line. Count the number of lines in the file you created.</li>
-</ol>
+1. Download the <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Wikipedia article</a> about Linus Torvalds to your computer using **wget**.
+2. Using "grep", filter out the lines containing the word "Linux". Write the lines to a new file.
+3. Search online how you can count the lines of a file using the command line. Count the number of lines in the file you created.
+
 
 If you wish, you can do the same exercise without writing anyting to a separate file in between.
 
@@ -730,7 +728,7 @@ It recommended to separate superusers from regular users in a computer system. T
 
 However, a regular user can run commands with the privileges of a superuser, if they belong to the _sudoers_ group. This can be done by adding **sudo** in front of the command. The user will be prompted with their own password. Using **sudo** is often required for installing programs with a package manager for example. Nonetheless, unnecessary use of **sudo** should be avoided. You will need it sometimes, but you shouldn't append it before each command to avoid permission errors. 
 
-**You shouldn't try to run **sudo** commands on the school's computers**!
+**You shouldn't try to run sudo commands on the school's computers**!
 
  Don't for example copy a command from the internet which starts with the word "sudo" if you don't know what it does. Otherwise you are giving full privileges to an unknown program in your system.
 

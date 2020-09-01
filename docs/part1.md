@@ -19,7 +19,7 @@ published: true
 <li>Understand what a commit is and knows how to create one.</li>
 <li>Understand the different states a change goes through before it's added to a commit.</li>
 <li>Understand what the master branch is.</li>
-<li>Know how to read the output of the command **git status**</li>
+<li>Know how to read the output of the command `git status`</li>
 <li>Know how to create a repository on GitHub and add it to an existing Git project.</li>
 <li>Know how to use GitHub through an SSH connection.</li>
 <li>Know how to publish locally made commits.</li>
@@ -272,7 +272,7 @@ If you see the following message when creating a commit **error: cannot run : No
 <h3>Exercise 4: Removing changes </h3>
 <ol>
 <li>Find out how you can remove changes from the state where they are being added to the next commit (under "Changes to be commited"), and move them under the headline "Changes not staged for commit"? Hint: git status will help.</li>
-<li>Add some new products to the shopping list, and add them to the next commit (so that they are under **Changes to be commited**). <strong>Don't create the commit yet.</strong></li>
+<li>Add some new products to the shopping list, and add them to the next commit (so that they are under Changes to be commited). <strong>Don't create the commit yet.</strong></li>
 <li>Then remove the changes from the next commit.</li>
 <li>Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.</li>
 </ol>
@@ -323,9 +323,9 @@ If you haven't created an SSH key pair on your computer, do it first. The instru
 <p>
 Add your public SSH key to your GitHub account. <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">GitHub has instructions for it</a>.
 </p>
-<p class="note">
+
 If you don't want to install a new program (as suggested by the instructions), you can print the SSH key to your terminal with the command **cat**, copy it by hand, and continue following GitHub's instructions from step 2.
-</p>
+
 
 
 <h3>Exercise 6: Creating a remote in GitHub</h3>
@@ -428,7 +428,7 @@ In situations like this one can put the local changes aside to the _stash_. This
 
 <h3>Exercise 9: Using stash when pulling from the remote</h3>
 <ol>
-<li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline **untracked** in the output of git status).</li>
+<li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline UNTRACKED in the output of git status).</li>
 <li>Stash the changes you just made using Git.</li>
 <li>Open the files you last and check if you can still see the changes</li>
 <li>Edit the <i>first</i> sentence of the file story.txt in GitHub and create a commit.</li>
@@ -620,7 +620,7 @@ Of course, the same procedure can be repeated on the command line. You can brows
 <ol>
 <li>Create a new file to you project called "secret.txt", and write something inside such as "this is a very important secret".</li>
 <li>Create a new commit of the new file and the contents added to it.</li>
-<li>Then remove the file **secret.txt**, and create a new commit of the deletition.</li>
+<li>Then remove the file secret.txt, and create a new commit of the deletition.</li>
 <li>Push the changes to GitHub.</li>
 <li>Navigate to the project page on GitHub. You shouldn't see the secret on the front page. Find the secret from your commit history. Find the secret also using the command line.</li>
 </ol>
