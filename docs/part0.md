@@ -317,15 +317,15 @@ cat2.jpg
 
 In this exercise you'll practice file management from the command line. Start by creating a folder structure described in the figure below:
 
-<img src="../assets/file_management_1.png" alt="Figure describing the starting position"/>
+<p><img src="../assets/file_management_1.png" alt="Figure describing the starting position"/></p>
 
-<p>
+
 In the folder structure the directory **school** contains three folders: **tools**, **CS1** and **CS2**. The **tools** folder contains a file called **cmnd-line.txt**, the **CS1** folder contains **lecture1.txt** and the **CS2** folder contains the files **lecture2.txt** and **java.txt**.
 
 <br><br>
 
 First create the **school** folder and move inside it. Then create the folder structure described above. Create some of the files and folders directly from the **school** folder, by using longer paths, and some by moving into the subfolder before creating a new file.
-</p>
+
 
 <p class="note">
 You can create a text file by opening it in a text editor and saving, or with the command **touch**.</p>
