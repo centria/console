@@ -13,7 +13,7 @@ If you do not have access to Unix, Linux or Mac, you can do the exercises in Win
 
 There might be some exercises that cannot be done in certain environments. For example, **Git Bash** does not have the commands **man**, **wget** or **zip** installed by default. If the terminal tells you **command not found**, first check you did not do a typo. If the command truly is not found, it is not installed, and you can skip the exercise. **READ THE INSTRUCTIONS AND THE MATERIAL, EVEN IF THE COMMAND IS NOT FOUND!**
 
-<h2>The learning goals for this part</h2>
+## The learning goals for this part
 
 The goal is that after this part the student
 

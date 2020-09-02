@@ -5,40 +5,34 @@ nav_order: 3
 published: true
 ---
 
-## Version control: Git and Github
+# Version control: Git and Github
 
 
-# Learning goals
+## Learning goals
 
-<div>
-<h4>The goal is that after this week, the student will</h4>
 
-<ul>
-<li>Understand the motivations for using version control.</li>
-<li>Know how to create a Git project.</li>
-<li>Understand what a commit is and knows how to create one.</li>
-<li>Understand the different states a change goes through before it's added to a commit.</li>
-<li>Understand what the master branch is.</li>
-<li>Know how to read the output of the command `git status`</li>
-<li>Know how to create a repository on GitHub and add it to an existing Git project.</li>
-<li>Know how to use GitHub through an SSH connection.</li>
-<li>Know how to publish locally made commits.</li>
-<li>Know how set locally made changes aside to the stash, and how to get them back.</li>
-<li>Know what a merge commit is.</li>
-<li>Know what a merge conflict is.</li>
-<li>Understand how a merge conflict is formed.</li>
-<li>Know how to solve a merge conflict.</li>
-<li>Know how to view old commits on GitHub and the command line, and how to move back to the latest commit of master after checking out old ones.</li>
-<li>Know how to clone a Git project to their local machine.</li>
-<li>Understand how GitHub can be used in team projects.</li>
-<ul>
-<li>Know what an issue is.</li>
-<li>Know what forking a project means.</li>
-<li>Know what a pull request is.</li>
-</ul>
-</ul>
+The goal is that after this week, the student will
 
-</div>
+- Understand the motivations for using version control.
+- Know how to create a Git project.
+- Understand what a commit is and knows how to create one.
+- Understand the different states a change goes through before it's added to a commit.
+- Understand what the master branch is.
+- Know how to read the output of the command `git status`
+- Know how to create a repository on GitHub and add it to an existing Git project.
+- Know how to use GitHub through an SSH connection.
+- Know how to publish locally made commits.
+- Know how set locally made changes aside to the stash, and how to get them back.
+- Know what a merge commit is.
+- Know what a merge conflict is.
+- Understand how a merge conflict is formed.
+- Know how to solve a merge conflict.
+- Know how to view old commits on GitHub and the command line, and how to move back to the latest commit of master after checking out old ones.
+- Know how to clone a Git project to their local machine.
+- Understand how GitHub can be used in team projects.
+  - Know what an issue is.
+  - Know what forking a project means.
+  - Know what a pull request is.
 
 ## Version control: Git and GitHub
 
@@ -253,14 +247,14 @@ Branches are usually used for testing out new features without breaking a workin
 
 <h3>Exercise 3: Practising working with commits </h3>
 <ol>
-<li>Create a folder on the command line and turn it into a Git project.</li>
-<li>Create a file called "story.txt" in your project. Add a lot of text inside.</li>
-<li>Add another file called "shopping_list.txt" to the project, and write down what you need from the store (or just many rows of text).</li>
-<li>Create a subfolder called "school" into the project, and create a file called "tools.txt" inside. You will need these files in the future exercises.</li>
-<li>After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.</li>
-<li>Using the command "git log", check that you have properly created three commits.</li>
-<li>Add something new to the shopping list, and create another commit. Use the command "git add -p".</li>
-<li>Make sure you can see all the commits in the output of "git log".</li>
+- Create a folder on the command line and turn it into a Git project.
+- Create a file called "story.txt" in your project. Add a lot of text inside.
+- Add another file called "shopping_list.txt" to the project, and write down what you need from the store (or just many rows of text).
+- Create a subfolder called "school" into the project, and create a file called "tools.txt" inside. You will need these files in the future exercises.
+- After doing all the changes described above, create a total of three commits: one, where you add the story, a second on where you add the shopping list, and a third one where you add the school folder. Make sure that each commit message is truly descriptive.
+- Using the command "git log", check that you have properly created three commits.
+- Add something new to the shopping list, and create another commit. Use the command "git add -p".
+- Make sure you can see all the commits in the output of "git log".
 </ol>
 
 
@@ -271,10 +265,10 @@ If you see the following message when creating a commit **error: cannot run : No
 
 <h3>Exercise 4: Removing changes </h3>
 <ol>
-<li>Find out how you can remove changes from the state where they are being added to the next commit (under "Changes to be commited"), and move them under the headline "Changes not staged for commit"? Hint: git status will help.</li>
-<li>Add some new products to the shopping list, and add them to the next commit (so that they are under Changes to be commited). <strong>Don't create the commit yet.</strong></li>
-<li>Then remove the changes from the next commit.</li>
-<li>Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.</li>
+- Find out how you can remove changes from the state where they are being added to the next commit (under "Changes to be commited"), and move them under the headline "Changes not staged for commit"? Hint: git status will help.
+- Add some new products to the shopping list, and add them to the next commit (so that they are under Changes to be commited). <strong>Don't create the commit yet.</strong>
+- Then remove the changes from the next commit.
+- Then remove the changes, using Git, so that when you open the shopping list, the new products are not there.
 </ol>
 
 
@@ -350,8 +344,8 @@ Let's push the changes we made to the file **tools.txt** by running **git push -
 
 <h3>Exercise 7: Publishing a commit</h3>
 <ol>
-<li>Push the three commits you made earlier to the master branch of the remote repository.</li>
-<li>Check on GitHub that you can find all the changes in the remote.</li>
+- Push the three commits you made earlier to the master branch of the remote repository.
+- Check on GitHub that you can find all the changes in the remote.
 </ol>
 
 
@@ -428,15 +422,15 @@ In situations like this one can put the local changes aside to the _stash_. This
 
 <h3>Exercise 9: Using stash when pulling from the remote</h3>
 <ol>
-<li>Make changes to some files which you have already added to Git once (i.e. they are not under the headline UNTRACKED in the output of git status).</li>
-<li>Stash the changes you just made using Git.</li>
-<li>Open the files you last and check if you can still see the changes</li>
-<li>Edit the <i>first</i> sentence of the file story.txt in GitHub and create a commit.</li>
-<li>Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.</li>
-<li>Fetch the changes you made to story.txt in the remote repository to the local version. Use the stash.</li>
-<li>After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of story.txt.</li>
-<li>Push the end result to GitHub.</li>
-<li>Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.</li>
+- Make changes to some files which you have already added to Git once (i.e. they are not under the headline UNTRACKED in the output of git status).
+- Stash the changes you just made using Git.
+- Open the files you last and check if you can still see the changes
+- Edit the <i>first</i> sentence of the file story.txt in GitHub and create a commit.
+- Then edit the <i>last</i> sentence of the same file locally, but <strong>don't create a commit</strong>.
+- Fetch the changes you made to story.txt in the remote repository to the local version. Use the stash.
+- After you have successfully fetched the changes to the local version, create a commit of the changes you made to the last sentence of story.txt.
+- Push the end result to GitHub.
+- Make sure you can see both the changes you made to the first sentence and the ones to the last sentence in the remote version.
 
 If you see "CONFLICT" outputted to the terminal when popping changes from the stash, the section "Merge Conflicts" will help.
 
@@ -499,14 +493,14 @@ Now according to the output of **git status** we have  created two commits, (**a
 
 <h3>Exercise 10: Merging </h3>
 <ol>
-<li>Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.</li>
-<li>Try pushing the local commit to the remote repository and observer the error message.</li>
-<li>Pull the commit from the remote repository to your local version and write "my first merge" as the commit message.</li>
+- Create two non-conflicting commits, one directly to the remote repository, and another to the local version. For example, edit the first line of your shopping list via GitHub, and the last line on the local version.
+- Try pushing the local commit to the remote repository and observer the error message.
+- Pull the commit from the remote repository to your local version and write "my first merge" as the commit message.
 
 If you see "CONFLICT" printed out while pulling, read the next section "Merge Conflicts".
 
 
-<li>Finally, push all the changes to GitHub.</li>
+- Finally, push all the changes to GitHub.
 </ol>
 
 
@@ -618,11 +612,11 @@ Of course, the same procedure can be repeated on the command line. You can brows
 
 <h3>Exercise 12: A Secret</h3>
 <ol>
-<li>Create a new file to you project called "secret.txt", and write something inside such as "this is a very important secret".</li>
-<li>Create a new commit of the new file and the contents added to it.</li>
-<li>Then remove the file secret.txt, and create a new commit of the deletition.</li>
-<li>Push the changes to GitHub.</li>
-<li>Navigate to the project page on GitHub. You shouldn't see the secret on the front page. Find the secret from your commit history. Find the secret also using the command line.</li>
+- Create a new file to you project called "secret.txt", and write something inside such as "this is a very important secret".
+- Create a new commit of the new file and the contents added to it.
+- Then remove the file secret.txt, and create a new commit of the deletition.
+- Push the changes to GitHub.
+- Navigate to the project page on GitHub. You shouldn't see the secret on the front page. Find the secret from your commit history. Find the secret also using the command line.
 </ol>
 
 
@@ -653,8 +647,8 @@ If the chages you have done to your own version are good enough in your own opin
 
 <h3>Exercise 13: Cloning</h3>
 <ol>
-<li>Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set</li>
-<li>Find an <a href="https://en.wikipedia.org/wiki/Open-source_software">open source</a> project of your choice from GitHub (you can for example check our student organization <a href="https://github.com/TKOaly">TKO-äly's GitHub</a> for some projects). First clone the project to your local machine. Then find out what the name of the remote repository is set to by default. You can do this with the command you found in the previous part of this exercise.</li>
+- Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set
+- Find an <a href="https://en.wikipedia.org/wiki/Open-source_software">open source</a> project of your choice from GitHub (you can for example check our student organization <a href="https://github.com/TKOaly">TKO-äly's GitHub</a> for some projects). First clone the project to your local machine. Then find out what the name of the remote repository is set to by default. You can do this with the command you found in the previous part of this exercise.
 </ol>
 
 
