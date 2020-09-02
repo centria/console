@@ -6,7 +6,7 @@ nav_order: 1
 
 # Introduction
 
-This site is meant as an introduction to console and git, in [Centria University of Applied Sciences](https://web.centria.fi/en). With this course you will learn the basics of command line tools as well as version control, namely git.
+This site is meant as an introduction to command line (or console) and git, in [Centria University of Applied Sciences](https://web.centria.fi/en). With this course you will learn the basics of *command line* tools as well as version control, namely *git*.
 
 # Prerequisites
 
