@@ -1,6 +1,6 @@
 ---
 title: "Part 0 - Command Line"
-permalink: /part0/
+permalink: /commandline/
 nav_order: 2
 published: true
 ---

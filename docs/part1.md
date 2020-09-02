@@ -1,6 +1,6 @@
 ---
 title: "Part 1 - Version control: Git and Github"
-permalink: /part1/
+permalink: /git/
 nav_order: 3
 published: true
 ---
