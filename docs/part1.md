@@ -1,11 +1,11 @@
 ---
-title: "Part 1 - Version control: Git and Github"
+title: "Version control: Git and Github"
 permalink: /git/
 nav_order: 3
 published: true
 ---
 
-## Part 1 - Version control: Git and Github
+## Version control: Git and Github
 
 
 # Learning goals

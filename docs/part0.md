@@ -1,11 +1,11 @@
 ---
-title: "Part 0 - Command Line"
+title: "Command Line"
 permalink: /commandline/
 nav_order: 2
 published: true
 ---
 
-# Part 0 - Command line
+# Command line
 
 This is the beginning of the course material. The primary goal of the first part is to get to know the command line in a Unix-like environment.
 
@@ -92,7 +92,7 @@ An argument is an unconstrained value defined by the user. The most common examp
 Here are two examples of commands, where you can see how options and parameters can be used:
 
 ```bash
-ls -la Downloads/tiedosto
+ls -la Downloads/filename
 ```
 
 First, try to run just the command **ls** in your home folder and observe the output. Then run **ls -la** and **ls -la ~/Downloads**. You don't have to understand what the command does, but you should notice that the outputs look different each time.
