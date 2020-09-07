@@ -260,8 +260,8 @@ Note that the file you created with notepad has been created as a Windows user. 
 Find out how the text editor **nano** works by using Google or the **man** command. Make sure you know how to do at least the following things:
 
 <ul>
-<li> Saving a file without closing nano</li>
-<li> Copying and pasteing in nano</li>
+-  Saving a file without closing nano
+-  Copying and pasteing in nano
 </ul>
 
 Test out the procedures in practice! For example, open a file **example.txt**, add some text into it and save without closing. Then open the file using another text editor to make sure that the contents were saved.
@@ -274,9 +274,9 @@ Test out the procedures in practice! For example, open a file **example.txt**, a
 Another command line text editor with a lot more features is <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>. However, it is notoriously unintuitive to use for beginners. Find out the following things about using vim:
 
 <ul>
-<li>What are "insert mode" and "command mode"?</li>
-<li>How can you switch between then?</li>
-<li>How can you close vim? <br></li>
+- What are "insert mode" and "command mode"?
+- How can you switch between then?
+- How can you close vim? <br>
 </ul>
 
 
@@ -375,11 +375,11 @@ Notice that the awkward typo in **cmnd-line.txt** has been fixed. The file **jav
 
 Files can be removed with the command **rm** (<b>r</b>e<b>m</b>ove).
 
-<ol>
-<li>By using the command line, remove the files you created in the previous exercise. </li>
-<li>Find out how you can remove a folder from the command line.</li>
-<li>Remove the whole "school" folder.</li>
-</ol>
+
+- By using the command line, remove the files you created in the previous exercise. 
+- Find out how you can remove a folder from the command line.
+- Remove the whole "school" folder.
+
 Note that when you remove something on the command line, it is not moved to the rubbish bin, but deleted right away.
 
 
@@ -467,9 +467,9 @@ Note that the filtering also included occurences inside another string. In most 
 By default "grep" is case sensitive, which means that it treats "a" and "A" differently when searching for matches.
 
 <ul>
-<li>Take a look at the output of "grep --help" or grep's "man" page, and find out how you can make grep ignore case.</li>
+- Take a look at the output of "grep --help" or grep's "man" page, and find out how you can make grep ignore case.
 
-<li>Find out (using Google for example) how you can only match occurences which are at the beginning of a line. Make sure you understood how to do this, by practicing using the command on the command line. You can for example write the following to a file:</li>
+- Find out (using Google for example) how you can only match occurences which are at the beginning of a line. Make sure you understood how to do this, by practicing using the command on the command line. You can for example write the following to a file:
 </ul>
 
 <pre>
@@ -560,12 +560,12 @@ The command required to download something from the internet is **wget** (_world
 
 <h3>Exercise 11: Wget and HTML code</h3>
 
-<ol>
-<li>Download a site of your liking to your computer using "wget".</li>
-<li>Open the .html extensioned file using a graphical browser like Firefox or Chrome (try clicking it in the graphical file browser). The site will most likely look different from what you're used to. </li>
-<li> Open the file in such a way that allows you to see the actual HTML code. In other words, open the file using something other than a browser. The code has a lot of tags marked with "<" and ">", and one of the first ones should contain "html".</li>
-<li>What was the program you used to open the file in each case? Think about how the program processed the file (in a very general way).</li>
-</ol>
+
+- Download a site of your liking to your computer using "wget".
+- Open the .html extensioned file using a graphical browser like Firefox or Chrome (try clicking it in the graphical file browser). The site will most likely look different from what you're used to. 
+-  Open the file in such a way that allows you to see the actual HTML code. In other words, open the file using something other than a browser. The code has a lot of tags marked with "<" and ">", and one of the first ones should contain "html".
+- What was the program you used to open the file in each case? Think about how the program processed the file (in a very general way).
+
 
 You'll learn how to write HTML documents in the third part of the course.
 
@@ -713,12 +713,12 @@ Remember that in order to run a file, it has to be given execute permissions wit
 
 <h3>Exercise 14: A small bash script</h3>
 
-<ol>
-<li>Find out how you can print text to the standard output in Bash. </li>
-<li>Write a small script which outputs "Hello world!". </li>
-<li> Run the script and make sure it works properly, i.e. there are no errors and "Hello World" appears to the terminal.</li>
-<li>Try to find out why the first programming exercises usually involve printing "Hello world!".</li >
-</ol>
+
+- Find out how you can print text to the standard output in Bash. 
+- Write a small script which outputs "Hello world!". 
+-  Run the script and make sure it works properly, i.e. there are no errors and "Hello World" appears to the terminal.
+- Try to find out why the first programming exercises usually involve printing "Hello world!".
+
 
 
 
