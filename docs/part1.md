@@ -331,6 +331,7 @@ If you don't want to install a new program (as suggested by the instructions), y
 
 Add the repository as a remote to your project. If you did the previous exercise, use an SSH address, otherwise use HTTPS.</p>
 
+*NOTICE!* Here you will get the repository address! You can find it in your browser address bar, and it is in format **https://github.com/username/repository**, where username is your GitHub username, and repository is the name of the repository you have just created.
 
 
 ### Publishing
