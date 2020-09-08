@@ -548,7 +548,7 @@ thursday console: The command line is a black box
 friday cafeteria: Pizza
 ```
 
-Then separate the menu of this week to its own file **cafeteria.txt**. You don't have to remove the menu from the **notes** file. Also separate the notes concerning the course Introduction to Java.
+Then separate the menu of this week to its own file **cafeteria.txt**. You don't have to remove the menu from the **notes** file. Also separate the notes concerning the course Intro to cs.
 
 
 
