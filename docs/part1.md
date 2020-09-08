@@ -646,7 +646,7 @@ If the chages you have done to your own version are good enough in your own opin
 <h3>Exercise 13: Cloning</h3>
 
 - Find out using Google, how you can find out the names and addresses of the remote repositories of a project. The answer is a command you should run inside the Git project, when a remote has been set
-- Find an <a href="https://en.wikipedia.org/wiki/Open-source_software">open source</a> project of your choice from GitHub (you can for example check our student organization <a href="https://github.com/TKOaly">TKO-äly's GitHub</a> for some projects). First clone the project to your local machine. Then find out what the name of the remote repository is set to by default. You can do this with the command you found in the previous part of this exercise.
+- Find an <a href="https://en.wikipedia.org/wiki/Open-source_software">open source</a> project of your choice from GitHub (you can for example check our course materials from <a href="https://github.com/centria/">Centria's GitHub</a> for some projects). First clone the project to your local machine. Then find out what the name of the remote repository is set to by default. You can do this with the command you found in the previous part of this exercise.
 
 
 

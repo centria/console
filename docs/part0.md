@@ -124,6 +124,8 @@ Let's take a look at the **man** page for the command **ls**. Running the comman
 
 ![man page for ls](../assets/man.png)
 
+NOTICE! If the **man** command does not work on your computer, you can find the information from here: [https://linux.die.net/man/](https://linux.die.net/man/). Type in the command you want to find in the search bar.
+
 Even though man pages can be hard to read for beginners, they usually offer the most comprehensive documentation available for a specific command.
 
 The "name" section gives you an overall understanding about that the command does. "Synopsis" tells how you can call the program. In the case of the command **ls** for example, the options should be given to the command before the file path. Both the options and the file name are optional parameters, which is why they're written inside square brackets.
